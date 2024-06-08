@@ -3,7 +3,10 @@
   icon: fas fa-envelope
 - title: Researchgate
   url: https://www.researchgate.net/profile/Junhong-Zhong-2
-  icon: fab fa-twitter
+  icon: fab fa-researchgate
 - title: GitHub
   url: https://github.com/gtzjh
   icon: fab fa-github
+- title: WeChat Official Account
+  url: /wechat_qrcode/
+  icon: fab fa-weixin

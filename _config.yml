@@ -1,6 +1,6 @@
 # Setup
-title: Not Pure Poole
-description: A simple, beautiful, and powerful Jekyll theme for blogs
+title: Junhong Zhong
+description: Bonjour! Welcome to my website !
 url: https://vszhub.github.io
 avatar: /avatar.jpeg
 paginate: 5
@@ -33,10 +33,9 @@ twitter:
   card: summary
 logo: logo.png
 social:
-  name: Songzi Vong
+  name: Junhong Zhong
   links:
-    - https://twitter.com/vszhub
-    - https://github.com/vszhub
+    - https://github.com/gtzjh
 google_site_verification: xxxxx
 lang: en
 
