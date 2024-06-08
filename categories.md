@@ -1,6 +1,6 @@
 ---
 layout: archive-taxonomies
-permalink: /categories/
+permalink: //
 title: Categories
 type: categories
 ---

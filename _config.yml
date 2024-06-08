@@ -1,11 +1,11 @@
 # Setup
 title: Junhong Zhong
 description: Bonjour! Welcome to my website !
-url: https://vszhub.github.io
-avatar: /avatar.jpeg
+url: https://gtzjh.github.io
+avatar: /avatar.jpg
 paginate: 5
 permalink: pretty
-cover_image: /bg.jpeg
+cover_image: /bg.jpg
 
 # Gems
 plugins:
@@ -28,15 +28,11 @@ exclude:
   - not-pure-poole.gemspec
 
 # Optimize Jekyl SEO Tag
-twitter:
-  username: vszhub
-  card: summary
 logo: logo.png
 social:
   name: Junhong Zhong
   links:
     - https://github.com/gtzjh
-google_site_verification: xxxxx
 lang: en
 
 sass:
