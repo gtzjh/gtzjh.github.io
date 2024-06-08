@@ -1,14 +1,14 @@
 - title: Home
-  url:/home/
+  url: /home/
 - title: CV
   url: /cv/
 - title: Publications
   url: /publications/
 - title: More about me
-  url:/more_about_me/
+  url: /more_about_me/
 - title: Blogs
-  url:/blogs/
+  url: /blogs/
 - title: GitHub projects
-  url:/github_projects/
+  url: /github_projects/
 - title: Photography
-  url:/photography/
+  url: /photography/
