@@ -4,15 +4,12 @@
 - type: publications
   title: Publications
   url: /publications/
-- type: more_about_me
-  title: More about me
-  url: /url/
-- type: blogs
-  title: Blogs
-  url: /blogs/
 - type: github_projects
   title: GitHub projects
   url: /github_projects/
+- type: blogs
+  title: Blogs
+  url: /blogs/
 - type: photography
   title: Photography
   url: /photography/

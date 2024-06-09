@@ -12,7 +12,7 @@ type: publications
 1. Zhong, J., Xiao, R., Wang, P., Yang, X., Lu, Z., Zheng, J., Jiang, H., Rao, X., Luo, S., & Huang, F. (2024). Identifying influence factors and thresholds of the next day’s pollen concentration in different seasons using interpretable machine learning. Science of The Total Environment, 935, 173430. [https://doi.org/10.1016/j.scitotenv.2024.173430](https://doi.org/10.1016/j.scitotenv.2024.173430)
 
 
-## Coperation
+## Cooperation
 
 1. Duan, D., Wang, P., Rao, X., Zhong, J., Xiao, M., Huang, F., & Xiao, R. (2024). Identifying interactive effects of spatial drivers in soil heavy metal pollutants using interpretable machine learning models. Science of The Total Environment, 934, 173284. [https://doi.org/10.1016/j.scitotenv.2024.173284](https://doi.org/10.1016/j.scitotenv.2024.173284)
 
