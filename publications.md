@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 permalink: /publications/
 title: Publications
 type: publications

@@ -1,12 +1,12 @@
 ---
-layout: default
+layout: post
 permalink: /cv/
 title: CV
+math: true
+toc: true
 ---
 
 # CV
-
-## Info
 
 Junhong Zhong (钟俊宏)
 
