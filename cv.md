@@ -1,5 +1,5 @@
 ---
-layout: archive-dates
+layout: default
 permalink: /cv/
 title: CV
 ---
