@@ -9,7 +9,7 @@ toc: true
 
 **Junhong Zhong (钟俊宏)**
 
-**Email**: zhongjh86@outlook.com
+**Email**: [zhongjh86@outlook.com](mailto:zhongjh86@outlook.com)
 
 ## Education
 
