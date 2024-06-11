@@ -15,7 +15,7 @@ toc: true
 
 Guangdong University of Technology, Artificial Environment Engineering  (2022 - present)
 
-&#8195;*Supervisor: Prof. Xiao Rongbo [ecoxiaorb@136.com](ecoxiaorb@136.com) and Prof. Wang Peng [wpeng@gdut.edu.cn](wpeng@gdut.edu.cn)*
+&#8195;*Supervisor: Prof. Xiao Rongbo and Prof. Wang Peng*
 
 Guangdong University of Finance and Economics, Land Resources Management  (2017 - 2021)
 
