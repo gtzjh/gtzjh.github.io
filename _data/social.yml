@@ -1,3 +1,6 @@
+- title: e-mail
+  url: mailto:zhongjh86@outlook.com
+  icon: fab fa-envelope
 - title: Researchgate
   url: https://www.researchgate.net/profile/Junhong-Zhong-2
   icon: fab fa-researchgate
@@ -7,3 +10,6 @@
 - title: WeChat Official Account
   url: /wechat_qrcode.png
   icon: fab fa-weixin
+- title: Zhihu
+  url: https://www.zhihu.com/people/geojarvis
+  icon: fab fa-zhihu

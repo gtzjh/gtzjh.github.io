@@ -1,15 +1,12 @@
 - type: cv
-  title: CV
+  title: About Me
   url: /cv/
-- type: publications
-  title: Publications
-  url: /publications/
-- type: github_projects
-  title: GitHub projects
-  url: /github_projects/
-- type: blogs
-  title: Blogs
-  url: /blogs/
-- type: photography
-  title: Photography
-  url: /photography/
+#- type: publications
+#  title: Publications
+#  url: /publications/
+#- type: blogs
+#  title: Blogs
+#  url: /blogs/
+#- type: photography
+#  title: Photography
+#  url: /photography/
