@@ -1,6 +1,7 @@
 ---
 layout: default
 permalink: /
+redirect_from: /cv
 title: About Me
 math: true
 ---
