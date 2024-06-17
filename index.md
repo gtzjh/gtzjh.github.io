@@ -1,6 +1,6 @@
 ---
 layout: default
-permalink: /cv
+permalink: /
 title: About Me
 math: true
 ---
