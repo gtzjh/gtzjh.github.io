@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: home
 permalink: /cv/
 title: About Me
 math: true
