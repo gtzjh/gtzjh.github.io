@@ -20,7 +20,7 @@ Bachelor: Guangdong University of Finance and Economics, Land Resources Manageme
 
 ## Research interests
 
-- Environmental health and risk assessment (Master thesis: **Pollen allergy in urban green spaces**).
+- Environmental health and risk assessment (Master thesis: **Pollen allergy in urban green spaces (UGSs)**).
 
 - Application of remote sensing and interpretable machine learning in environmental research.
 
@@ -28,9 +28,9 @@ Bachelor: Guangdong University of Finance and Economics, Land Resources Manageme
 
 ## Publications
 
-1. **Zhong, Junhong**., Xiao, Rongbo*., Wang, Peng*., Yang, Xiaojun., Lu, Zongliang., Zheng, Jiatong., Jiang, Haiyan., Rao, Xin., Luo, Shuhua., & Huang, Fei. (2024). Identifying influence factors and thresholds of the next day’s pollen concentration in different seasons using interpretable machine learning. Science of The Total Environment, 935, 173430. [https://doi.org/10.1016/j.scitotenv.2024.173430](https://doi.org/10.1016/j.scitotenv.2024.173430)
+1. **Zhong, Junhong**., Xiao, Rongbo\*., Wang, Peng\*., Yang, Xiaojun., Lu, Zongliang., Zheng, Jiatong., Jiang, Haiyan., Rao, Xin., Luo, Shuhua., & Huang, Fei. (2024). Identifying influence factors and thresholds of the next day’s pollen concentration in different seasons using interpretable machine learning. Science of The Total Environment, 935, 173430. [https://doi.org/10.1016/j.scitotenv.2024.173430](https://doi.org/10.1016/j.scitotenv.2024.173430)
 
-2. Duan, Deyu., Wang, Peng*., Rao, Xin., Zhong, Junhong., Xiao, Meihong., Huang, Fei., & Xiao, Rongbo*. (2024). Identifying interactive effects of spatial drivers in soil heavy metal pollutants using interpretable machine learning models. Science of The Total Environment, 934, 173284. [https://doi.org/10.1016/j.scitotenv.2024.173284](https://doi.org/10.1016/j.scitotenv.2024.173284)
+2. Duan, Deyu., Wang, Peng\*., Rao, Xin., Zhong, Junhong., Xiao, Meihong., Huang, Fei., & Xiao, Rongbo\*. (2024). Identifying interactive effects of spatial drivers in soil heavy metal pollutants using interpretable machine learning models. Science of The Total Environment, 934, 173284. [https://doi.org/10.1016/j.scitotenv.2024.173284](https://doi.org/10.1016/j.scitotenv.2024.173284)
 
 3. 岑渝华, 王鹏, 黄飞, 钟俊宏, 叶梓轩, 林声伟, 胡珂, 翁雷霆, 胡志文, & 肖荣波. (2024). 不同植被类型的城市绿地声景特征及其影响因素. 生态学报, 15, 1–14. [https://doi.org/10.20103/j.stxb.202312292863](https://doi.org/10.20103/j.stxb.202312292863)
 
@@ -40,7 +40,7 @@ Bachelor: Guangdong University of Finance and Economics, Land Resources Manageme
 
 ## Conferences reports
 
-[The 29th Atmospheric Environment Science and Technology Conference (2023)](https://wx.vzan.com/live/page/1502963080?v=1700817151441)
+The 29th Atmospheric Environment Science and Technology Conference (2023)   [Link](https://wx.vzan.com/live/page/1502963080?v=1700817151441)
 
 
 ## Skills
