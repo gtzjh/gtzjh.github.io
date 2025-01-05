@@ -1,0 +1,58 @@
+/* Publications Page Styles */
+.publications-header {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../images/publications-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 56px;
+}
+
+.publications-header h1 {
+    color: white;
+    font-size: 4rem;
+    text-align: center;
+}
+
+.publications-content {
+    padding: 4rem 0;
+}
+
+.publication-section {
+    margin-bottom: 3rem;
+}
+
+.section-title {
+    color: #2c3e50;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+.publication-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.publication-item {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #eee;
+}
+
+.publication-item:last-child {
+    border-bottom: none;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .publications-header {
+        height: 200px;
+    }
+
+    .publications-header h1 {
+        font-size: 3rem;
+    }
+}
