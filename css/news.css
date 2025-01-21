@@ -1,6 +1,6 @@
 /* News Page Styles */
 .news-header {
-    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../images/bj6.webp');
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../images/news-bg.jpg');
     background-size: cover;
     background-position: center;
     height: 300px;
@@ -18,9 +18,6 @@
 
 .news-content {
     padding: 4rem 0;
-    margin: 0 auto;
-    max-width: 1300px;
-    text-align: left; /* 添加这一行 */
 }
 
 .news-item {
@@ -64,8 +61,8 @@
     position: absolute;
     top: 0;
     left: 0;
-    width: 300px;
-    height: 200px;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
     border-radius: 8px;
     transition: transform 0.3s ease;
