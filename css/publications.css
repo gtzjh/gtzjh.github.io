@@ -1,6 +1,6 @@
 /* Publications Page Styles */
 .publications-header {
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../images/publications-bg.jpg');
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../images/bj1.webp');
     background-size: cover;
     background-position: center;
     height: 300px;
@@ -18,7 +18,11 @@
 
 .publications-content {
     padding: 4rem 0;
+    margin: 0 auto;
+    max-width: 1300px;
+    text-align: left; /* 添加这一行 */
 }
+
 
 .publication-section {
     margin-bottom: 3rem;
@@ -54,5 +58,35 @@
 
     .publications-header h1 {
         font-size: 3rem;
+    }
+}
+.publication-item img {
+    height: auto;
+    width: 400px;
+    float: left;
+    margin-right: 20px;
+}
+
+.publication-description {
+    overflow: hidden;
+}
+
+/* 清除浮动 */
+.publication-item::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .publication-item img {
+        display: block;
+        margin: 0 auto 20px auto;
+        float: none;
+    }
+
+    .publication-description {
+        text-align: center;
     }
 }

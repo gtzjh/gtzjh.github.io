@@ -1,6 +1,6 @@
 /* Opportunities Page Styles */
-.Opportunities-header {
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../images/Opportunities-bg.jpg');
+.Perspective-header {
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../images/yun.jpg');
     background-size: cover;
     background-position: center;
     height: 300px;
@@ -10,23 +10,23 @@
     margin-top: 56px;
 }
 
-.Opportunities-header h1 {
+.Perspective-header h1 {
     color: white;
     font-size: 4rem;
     text-align: center;
 }
 
-.Opportunities-content {
+.Perspective-content {
     padding: 4rem 0;
     max-width: 900px;
     margin: 0 auto;
 }
 
-.Opportunities-section {
+.Perspective-section {
     margin-bottom: 2.5rem;
 }
 
-.Opportunities-section h2 {
+.Perspective-section h2 {
     color: #2c3e50;
     font-size: 1.8rem;
     margin-bottom: 1.5rem;
@@ -34,7 +34,7 @@
     padding-bottom: 0.5rem;
 }
 
-.Opportunities-section p {
+.Perspective-section p {
     color: #444;
     line-height: 1.8;
     margin-bottom: 1.5rem;
@@ -77,15 +77,15 @@
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
-    .Opportunities-header {
+    .Perspective-header {
         height: 200px;
     }
 
-    .Opportunities-header h1 {
+    .Perspective-header h1 {
         font-size: 3rem;
     }
 
-    .Opportunities-content {
+    .Perspective-content {
         padding: 2rem 1rem;
     }
 }

@@ -46,8 +46,8 @@
             <li class="nav-item">
               <a
                 class="nav-link active"
-                href="people.html">
-                People
+                href="news.html">
+                News
               </a>
             </li>
             <li class="nav-item">
@@ -62,13 +62,6 @@
                 class="nav-link"
                 href="publications.html">
                 Publications
-              </a>
-            </li>
-            <li class="nav-item">
-              <a
-                class="nav-link"
-                href="news.html">
-                News
               </a>
             </li>
             <li class="nav-item">
@@ -102,163 +95,101 @@
     </p>
 
     <!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>手动切换图片栏示例（带文字）</title>
-    <style>
-        /* 滚动容器的基本样式 */
-        .slider {
-            position: relative; /* 相对定位 */
-            width: 80%; /* 宽度占父容器的80% */
-            margin: auto; /* 自动水平居中 */
-            overflow: hidden; /* 隐藏超出容器的内容 */
-        }
+    <html lang="zh-CN">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Publications Page</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <div class="publications-content">
+            <div class="publication-section">
+                <h2 class="section-title"></h2>
+                <ul class="publication-list">
+                    
+                  <li class="publication-item">
+                        <img src="../demon-main/images/pub5.webp" alt="出版物1封面">
+                        <div class="publication-description">
+                            <h3>A synergistic ozone-climate control to address emerging ozone pollution challenges</h3>
+                            <p>One Earth (2023)</p>
+                            <p>Xiaopu Lyu , Ke Li , Hai Guo , Lidia Morawska , Beining Zhou , Yangzong Zeren , Fei Jiang , Changhong Chen , Allen H. Goldstein , Xiaobin Xu , Tao Wang , Xiao Lu , Tong Zhu , Xavier Querol , Satoru Chatani , Mohd Talib Latif , Daniel Schuch , Vinayak Sinha , Prashant Kumar , Benjamin Mullins , Rodrigo Seguel , Min Shao , Likun Xue , Nan Wang , Jianmin Chen , Jian Gao , Fahe Chai , Isobel Simpson , Baerbel Sinha , Donald R. Blake</p>
+                            <div class="links">
+                              <a
+                                class="btn btn-outline-primary"
+                                href="https://www.cell.com/one-earth/fulltext/S2590-3322(23)00311-1""class="underline" 
+                                target="_blank">Read More</a>
+                            </div>
+                          </div>
+                    </li>
 
-        /* 滚动内容的样式 */
-        .slider-wrapper {
-            display: flex; /* 使用flex布局 */
-            transition: transform 0.5s ease; /* 平滑过渡效果 */
-        }
+                    <li class="publication-item">
+                        <img src="../demon-main/images/pub1.webp" alt="出版物2封面">
+                        <div class="publication-description">
+                            <h3>Evidence for Reducing Volatile Organic Compounds to Improve Air Quality from Concurrent Observations and In Situ Simulations at 10 Stations in Eastern China</h3>
+                            <p>Environmental Science & Technology (2022)</p>
+                            <p>Xiaopu Lyu , Hai Guo , Qiaoli Zou , Ke Li , Enyu Xiong , Beining Zhou , Peiwen Guo , Fei Jiang , Xudong Tian</p>
+                            <div class="links">
+                              <a
+                                class="btn btn-outline-primary"
+                                href="https://pubs.acs.org/doi/abs/10.1021/acs.est.2c04340""class="underline" 
+                                target="_blank">Read More</a>
+                            </div>
+                          </div>
+                    </li>
 
-        /* 单个幻灯片的样式 */
-        .slide {
-            width: 100%; /* 每个幻灯片宽度占父容器的100% */
-            flex-shrink: 0; /* 防止缩小 */
-            text-align: center; /* 文字居中 */
-        }
+                    <li class="publication-item">
+                      <img src="../demon-main/images/pub2.webp" alt="出版物3封面">
+                      <div class="publication-description">
+                          <h3>In Situ Measurements of Molecular Markers Facilitate Understanding of Dynamic Sources of Atmospheric Organic Aerosols</h3>
+                          <p>Environmental Science & Technology (2020)</p>
+                          <p>Xiaopu Lyu , Hai Guo , Dawen Yao , Haoxian Lu , Yunxi Huo , Wen Xu , Nathan Kreisberg , Allen H Goldstein , John Jayne , Douglas Worsnop , Yan Tan , Shun-Cheng Lee , Tao Wang </p>
+                          <div class="links">
+                            <a
+                              class="btn btn-outline-primary"
+                              href="https://pubs.acs.org/doi/10.1021/acs.est.0c02277""class="underline" 
+                              target="_blank">Read More</a>
+                          </div>
+                        </div>
+                    </li>
 
-        /* 图片的样式 */
-        .slide img {
-            width: 100%; /* 图片宽度占父容器的100% */
-        }
+                    <li class="publication-item">
+                      <img src="../demon-main/images/pub3.webp" alt="出版物4封面">
+                      <div class="publication-description">
+                          <h3>An Ozone “Pool” in South China: Investigations on Atmospheric Dynamics and Photochemical Processes Over the Pearl River Estuary</h3>
+                          <p>Journal of Geophysical Research: Atmospheres (2019)</p>
+                          <p>Yangzong Zeren, Hai Guo, Xiaopu Lyu, Fei Jiang, Yu Wang, Xufei Liu, Lewei Zeng, Mei Li, Lei Li</p>
+                          <div class="links">
+                            <a
+                              class="btn btn-outline-primary"
+                              href="https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2019JD030833""class="underline" 
+                              target="_blank">Read More</a>
+                          </div>
+                        </div>
+                    </li>
 
-        /* 描述文字的样式 */
-        .slide p {
-            margin: 10px 0 0; /* 上边距10px，其他边距为0 */
-            font-size: 16px; /* 字体大小16px */
-            color: #333; /* 字体颜色 */
-        }
-
-        /* 按钮的基本样式 */
-        .button {
-            position: absolute; /* 绝对定位 */
-            top: 50%; /* 垂直居中 */
-            transform: translateY(-50%); /* 垂直居中 */
-            background-color: rgba(0, 0, 0, 0.5); /* 半透明背景 */
-            color: white; /* 白色文字 */
-            border: none; /* 无边框 */
-            padding: 10px; /* 内边距 */
-            cursor: pointer; /* 鼠标悬停时显示手型 */
-            z-index: 1; /* 置于顶层 */
-        }
-
-        /* 左按钮的样式 */
-        .prev {
-            left: 10px; /* 距左边10px */
-        }
-
-        /* 右按钮的样式 */
-        .next {
-            right: 10px; /* 距右边10px */
-        }
-    </style>
-</head>
-
-
-<body>
-    <div class="slider">
-        <!-- 左按钮 -->
-        <button class="button prev" onclick="showPrevImage()">&#10094;</button>
-        <div class="slider-wrapper">
-            <!-- 第一个幻灯片 -->
-            <div class="slide">
-                <img src="images/pub1.webp" alt="图片1">
-                <p>Ground-level ozone (O3) has been an emerging air pollution in China and interacts with fine particulate matters (PM2.5). We synthesized observations of O3 and its precursors in two summer months of 2020 at 10 sites in the Zhejiang province, East China and simulated the in situ photochemistry. O3 pollution in the northeastern Zhejiang province was more serious than that in the southwest. The site-average daytime O3 increment correlated well (R2 = 0.73) with the total reactivity of volatile organic compounds (VOCs) and carbon monoxide toward the hydroxyl radical (OH) in urban areas. Model simulation revealed that the main function of nitrogen oxides (NOx) at the rural sites where isoprene accounted for >85% of OH reactivity of VOCs was to facilitate the radical cycling. With NOx reduction from 0 to 90%, the self-reactions between peroxy radicals (Self-Rxns), a proven pathway for secondary organic aerosol formation, were intensified by up to 23-fold in a NOx-rich environment. In contrast, reducing VOCs could weaken the Self-Rxns while reducing O3 production rate and atmospheric oxidation capacity. This study observes and simulates O3 chemistry based on extensive measurements in typical Chinese cities, highlighting the necessity of reducing VOCs for co-benefit of O3 and PM2.5.</p>
-                <p>
-                  <a
-                    href="https://pubs.acs.org/doi/abs/10.1021/acs.est.2c04340"
-                    target="_blank">
-                    https://pubs.acs.org/doi/abs/10.1021/acs.est.2c04340
-                  </a>
-                </p>
-              </div>
-            <!-- 第二个幻灯片 -->
-            <div class="slide">
-                <img src="images/pub2.webp" alt="图片2">
-                <p>Reducing the amount of organic aerosol (OA) is crucial to mitigation of particulate pollution in China. We present time and air-origin dependent variations of OA markers and source contributions at a regionally urban background site in South China. The continental air contained primary OA markers indicative of source categories, such as levoglucosan, fatty acids, and oleic acid. Secondary OA (SOA) markers derived from isoprene and monoterpenes also exhibited higher concentrations in continental air, due to more emissions of their precursors from terrestrial ecosystems and facilitation of anthropogenic sulfate for monoterpenes SOA. The marine air and continental–marine mixed air had more abundant hydroxyl dicarboxylic acids (OHDCA), with anthropogenic unsaturated organics as potential precursors. However, OHDCA formation in continental air was likely attributable to both biogenic and anthropogenic precursors. The production efficiency of OHDCA was highest in marine air, related to the presence of sulfur dioxide and/or organic precursors in ship emissions. Regional biomass burning (BB) was identified as the largest contributor of OA in continental air, with contributions fluctuating from 8% to 74%. In contrast, anthropogenic SOA accounted for the highest fraction of OA in marine (37 ± 4%) and mixed air (31 ± 3%), overriding the contributions from BB. This study demonstrates the utility of molecular markers for discerning OA pollution sources in the offshore marine atmosphere, where continental and marine air pollutants interact and atmospheric oxidative capacity may be enhanced.</p>
-                <p>
-                  <a
-                    href="https://pubs.acs.org/doi/10.1021/acs.est.0c02277"
-                    target="_blank">
-                    https://pubs.acs.org/doi/10.1021/acs.est.0c02277
-                  </a>
-                </p>
-            </div>
-            <!-- 第三个幻灯片 -->
-            <div class="slide">
-                <img src="images/pub3.webp" alt="图片3">
-                <p>Pearl River Estuary (PRE) has been recognized as one of the key areas in South China experiencing severe air pollution. To understand the photochemical pollution over PRE, intensive measurements of O3 and its precursors were simultaneously conducted at a suburban site on the east bank of PRE (Tung Chung, TC) in Hong Kong and a rural site on the west bank (Qi'ao Island, QAI) in Zhuhai from 25 September to 29 November 2016. Three and sixteen O3 episode days (days with the maximum hourly O3 higher than 100 ppbv) were captured at TC and QAI, respectively. On the three days when O3 episodes occurred at TC, QAI also suffered from O3 episodes, which were all associated with tropical cyclones (typhoons). As a downwind site of PRE when northwesterly winds prevailed, TC displayed a higher maximum hourly O3 than QAI on these three days. In contrast, the other thirteen episodes that solely occurred at QAI were generally under northeasterly winds, which brought more coastal air to TC and led to lower levels of O3 at this site. In addition, the stronger titration of the locally emitted NO to O3 also accounted for the lower O3 at TC on these days. The simulations by Weather Research and Forecasting coupled with Chemistry model indicated that the interactions of synoptic winds and mesoscale breezes led to relatively weak winds and long residence time for air pollutants over the PRE, thereby air pollution accumulation. This provided the likelihood of intensive chemical productions of O3 over PRE, with the production rates even higher than those in the surrounding land areas. As such, it was concluded that PRE was a “pool” of O3, where atmospheric dynamics caused the accumulation of air pollutants and subsequently intensive photochemical reactions. The findings in this study may also apply to the other estuaries connecting terrestrial and marine systems over the world.</p>
-                <p>
-                  <a
-                    href="https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2019JD030833"
-                    target="_blank">
-                    https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2019JD030833
-                  </a>
-                </p>
-            </div>
-            <!-- 第4个幻灯片 -->
-            <div class="slide">
-              <img src="images/pub4.webp" alt="图片4">
-              <p>As intermediate products of photochemical reactions, alkyl nitrates (RONO2) regulate ozone (O3) formation. In this study, a photochemical box model incorporating master chemical mechanism well reproduced the observed RONO2 at an urban and a mountainous site, with index of agreement in the range of 0.66–0.73. The value 0.0003 was identified to be the most appropriate branching ratio for C1 RONO2, with the error less than 50%. Although levels of the parent hydrocarbons and nitric oxide (NO) were significantly higher at the urban site than the mountainous site, the production of C2–C3 RONO2 was comparable to or even lower than at the mountainous site, due to the lower concentrations of oxidative radicals in the urban environment. Based on the profiles of air pollutants at the mountainous site, the formation of C2–C4 RONO2 was limited by NOx (volatile organic compounds (VOCs)) when total volatile organic compounds (TVOCs)/NOx was higher (lower) than 10.0 ± 0.4 parts per billion by volume (ppbv)/ppbv. This dividing ratio decreased (p < 0.05) to 8.7 ± 0.4 ppbv/ppbv at the urban site, mainly due to the different air pollutant profiles at the two sites. For the formation of C1 RONO2, the NOx-limited regime extended the ratio of TVOCs/NOx to as low as 2.4 ± 0.2 and 3.1 ± 0.1 ppbv/ppbv at the mountainous and urban site, respectively. RONO2 formation led to a decrease of simulated O3, with reduction efficiencies (O3 reduction/RONO2 production) of 4–5 parts per trillion by volume (pptv)/pptv at the mountainous site and 3–4 pptv/pptv at the urban site. On the other hand, the variations of simulated O3 induced by RONO2 degradation depended upon the regimes controlling O3 formation and the relative abundances of TVOCs and NOx.</p>
-              <p>
-                <a
-                  href="https://agupubs.onlinelibrary.wiley.com/doi/full/10.1002/2017JD027315"
-                  target="_blank">
-                  https://agupubs.onlinelibrary.wiley.com/doi/full/10.1002/2017JD027315
-                </a>
-              </p>
-            </div>
-            <!-- 第5个幻灯片 -->
-            <div class="slide">
-              <img src="images/pub5.webp" alt="图片5">
-              <p>Tropospheric ozone threatens human health and crop yields, exacerbates global warming, and fundamentally changes atmospheric chemistry. Evidence has pointed toward widespread ozone increases in the troposphere, and particularly surface ozone is chemically complex and difficult to abate. Despite past successes in some regions, a solution to new challenges of ozone pollution in a warming climate remains unexplored. In this perspective, by compiling surface measurements at ∼4,300 sites worldwide between 2014 and 2019, we show the emerging global challenge of ozone pollution, featuring the unintentional rise in ozone due to the uncoordinated emissions reduction and increasing climate penalty. On the basis of shared emission sources, interactive chemical mechanisms, and synergistic health effects between ozone pollution and climate warming, we propose a synergistic ozone-climate control strategy incorporating joint control of ozone and fine particulate matter. This new solution presents an opportunity to alleviate tropospheric ozone pollution in the forthcoming low-carbon transition.</p>
-              <p>
-                <a
-                  href="https://www.cell.com/one-earth/fulltext/S2590-3322(23)00311-1"
-                  target="_blank">
-                  https://www.cell.com/one-earth/fulltext/S2590-3322(23)00311-1
-                </a>
-              </p>
+                    <li class="publication-item">
+                      <img src="../demon-main/images/pub4.webp" alt="出版物4封面">
+                      <div class="publication-description">
+                          <h3>Modeling C1–C4 Alkyl Nitrate Photochemistry and Their Impacts on O3 Production in Urban and Suburban Environments of Hong Kong</h3>
+                          <p>Journal of Geophysical Research: Atmospheres (2017)</p>
+                          <p>X. P. Lyu, H. Guo, N. Wang, I. J. Simpson, H. R. Cheng, L. W. Zeng, S. M. Saunders, S. H. M. Lam, S. Meinardi, D. R. Blake</p>
+                          <div class="links">
+                            <a
+                              class="btn btn-outline-primary"
+                              href="https://agupubs.onlinelibrary.wiley.com/doi/full/10.1002/2017JD027315""class="underline" 
+                              target="_blank">Read More</a>
+                          </div>
+                        </div>
+                    </li>
+                    <!-- 可以继续添加更多的出版物项 -->
+                </ul>
             </div>
         </div>
-        <!-- 右按钮 -->
-        <button class="button next" onclick="showNextImage()">&#10095;</button>
-    </div>
-
-    <script>
-        // 获取幻灯片容器和所有幻灯片
-        const sliderWrapper = document.querySelector('.slider-wrapper');
-        const slides = document.querySelectorAll('.slide');
-        let currentIndex = 0; // 当前显示的幻灯片索引
-
-        // 显示下一张图片
-        function showNextImage() {
-            currentIndex = (currentIndex + 1) % slides.length; // 计算下一个索引
-            const offset = -currentIndex * 100; // 计算偏移量
-            sliderWrapper.style.transform = `translateX(${offset}%)`; // 设置滚动偏移
-        }
-
-        // 显示上一张图片
-        function showPrevImage() {
-            currentIndex = (currentIndex - 1 + slides.length) % slides.length; // 计算上一个索引
-            const offset = -currentIndex * 100; // 计算偏移量
-            sliderWrapper.style.transform = `translateX(${offset}%)`; // 设置滚动偏移
-        }
-    </script>
-</body>
-</html>
+    </body>
+    </html>
+    
+    
 
     
 
@@ -269,7 +200,7 @@
           <a
             href="https://scholar.google.com.hk/citations?user=porzF74AAAAJ&hl=en&oi=sra"
             target="_blank">
-            Read More
+            Full List of Publications
           </a>
         </p>
       </div>
