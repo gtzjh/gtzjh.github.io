@@ -1,5 +1,5 @@
 /* Opportunities Page Styles */
-.opportunities-header {
+.news2-header {
     background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../images/bj简约.jpg');
     background-size: cover;
     background-position: center;
@@ -10,23 +10,42 @@
     margin-top: 56px;
 }
 
-.opportunities-header h1 {
+.news2-header h1 {
     color: white;
     font-size: 4rem;
     text-align: center;
 }
 
-.opportunities-content {
+.news-item {
+    display: flex;
+    align-items: center;
+  }
+  
+  .date {
+    width: 120px; /* 根据实际情况调整宽度 */
+  }
+  
+  .news-text {
+    flex: 1;
+    margin-right: 10px; /* 根据实际情况调整间距 */
+  }
+  
+  a {
+    white-space: nowrap;
+  }
+    
+
+.news2-content {
     padding: 4rem 0;
-    max-width: 900px;
+    max-width: 50%;
     margin: 0 auto;
 }
 
-.opportunities-section {
+.news2-section {
     margin-bottom: 2.5rem;
 }
 
-.opportunities-section h2 {
+.news2-section h2 {
     color: #2c3e50;
     font-size: 1.8rem;
     margin-bottom: 1.5rem;
@@ -34,7 +53,7 @@
     padding-bottom: 0.5rem;
 }
 
-.opportunities-section p {
+.news2-section p {
     color: #444;
     line-height: 1.8;
     margin-bottom: 1.5rem;
@@ -77,15 +96,15 @@
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
-    .opportunities-header {
+    .data-header {
         height: 200px;
     }
 
-    .opportunities-header h1 {
+    .data-header h1 {
         font-size: 3rem;
     }
 
-    .opportunities-content {
+    .data-content {
         padding: 2rem 1rem;
     }
 }

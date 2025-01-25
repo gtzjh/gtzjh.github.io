@@ -1,6 +1,6 @@
 /* Student Profile Page Styles */
 .student-header {
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../images/student-bg.jpg');
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../images/bj简约.jpg');
     background-size: cover;
     background-position: center;
     height: 300px;
@@ -18,7 +18,7 @@
 
 .student-content {
     padding: 4rem 0;
-    max-width: 1200px;
+    max-width: 900px;
     margin: 0 auto;
 }
 

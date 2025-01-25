@@ -1,9 +1,9 @@
 /* Opportunities Page Styles */
 .data-header {
-    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../images/bj7.webp');
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../images/bj简约.jpg');
     background-size: cover;
     background-position: center;
-    height: 300px;
+    height: 150px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -18,7 +18,7 @@
 
 .data-content {
     padding: 4rem 0;
-    max-width: 900px;
+    max-width: 50%;
     margin: 0 auto;
 }
 

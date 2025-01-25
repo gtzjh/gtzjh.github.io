@@ -1,9 +1,9 @@
-/* News Page Styles */
+/* 新闻页面样式 */
 .news-header {
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../images/news-bg.jpg');
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../images/bj简约.jpg');
     background-size: cover;
     background-position: center;
-    height: 300px;
+    height: 150px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -18,9 +18,12 @@
 
 .news-content {
     padding: 4rem 0;
+    max-width: 50%;
 }
 
 .news-item {
+    display: flex;
+    align-items: flex-start;
     margin-bottom: 3rem;
     padding-bottom: 2rem;
     border-bottom: 1px solid #eee;
@@ -43,29 +46,21 @@
     cursor: pointer;
 }
 
-.news-images {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 1rem;
-    margin: 1rem 0;
-}
-
 .news-image-container {
-    position: relative;
-    width: 100%;
-    padding-top: 75%; /* 4:3 Aspect Ratio */
+    flex-shrink: 0;
+    width: 150px;
+    height: auto;
     overflow: hidden;
+    margin-right: 1rem;
 }
 
 .news-image {
-    position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
-    height: 100%;
+    height: auto;
     object-fit: cover;
     border-radius: 8px;
     transition: transform 0.3s ease;
+    border: 2px solid #ccc; /* 添加边框 */
 }
 
 .news-image:hover {
@@ -76,7 +71,26 @@
     display: none;
 }
 
-/* Responsive Adjustments */
+.news-text-content {
+    flex-grow: 1;
+}
+
+.news-images {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+/* 无图片时的占位符 */
+.news-placeholder {
+    flex-shrink: 0;
+    width: 150px;
+    height: 0;
+    margin-right: 1rem;
+}
+
+/* 响应式调整 */
 @media (max-width: 768px) {
     .news-header {
         height: 200px;
@@ -84,5 +98,16 @@
 
     .news-header h1 {
         font-size: 3rem;
+    }
+
+    .news-item {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .news-image-container,
+    .news-placeholder {
+        width: 100%;
+        margin-bottom: 1rem;
     }
 }

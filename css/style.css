@@ -45,9 +45,10 @@ body {
 
 /* Welcome Section */
 .welcome-section {
-    max-width: 900px;
+    max-width: 900px; /* 最大宽度定义为900px */
     margin: 0 auto;
     padding: 2rem 0;
+    text-align: justify;
 }
 
 .welcome-section h2 {

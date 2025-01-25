@@ -2,29 +2,17 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>People - EASE</title>
-    <link
-      href="css/bootstrap.min.css"
-      rel="stylesheet" />
-    <link
-      href="css/style.css"
-      rel="stylesheet" />
-    <link
-      href="css/people.css"
-      rel="stylesheet" />
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="css/people.css" rel="stylesheet" />
   </head>
   <body>
-    <!-- Navigation (Same as index.html) -->
+    <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
       <div class="container">
-        <a
-          class="navbar-brand"
-          href="index.html">
-          EASE
-        </a>
+        <a class="navbar-brand" href="index.html">EASE</a>
         <button
           class="navbar-toggler"
           type="button"
@@ -32,78 +20,47 @@
           data-bs-target="#navbarNav">
           <span class="navbar-toggler-icon"></span>
         </button>
-
-        <div
-          class="collapse navbar-collapse"
-          id="navbarNav">
+        <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a
-                class="nav-link active"
-                href="index.html">
-                Home
-              </a>
-            </li>
-            <li class="nav-item">
-              <a
-                class="nav-link active"
-                href="news.html">
-                News
-              </a>
-            </li>
-            <li class="nav-item">
-              <a
-                class="nav-link active"
-                href="projects.html">
-                Projects
-              </a>
-            </li>
-            <li class="nav-item">
-              <a
-                class="nav-link"
-                href="publications.html">
-                Publications
-              </a>
-            </li>
-            <li class="nav-item">
-              <a
-                class="nav-link"
-                href="opportunities.html">
-                Opportunities
-              </a>
-            </li>
-            <li class="nav-item">
-              <a
-                class="nav-link"
-                href="data.html">
-                Data
-              </a>
-            </li>
+            <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link active" href="people.html">People</a></li>
+            <li class="nav-item"><a class="nav-link active" href="news.html">News</a></li>
+            <li class="nav-item"><a class="nav-link active" href="projects.html">Projects</a></li>
+            <li class="nav-item"><a class="nav-link" href="data.html">Data</a></li>
+            <li class="nav-item"><a class="nav-link" href="publications.html">Publications</a></li>
+            <li class="nav-item"><a class="nav-link" href="opportunities.html">Opportunities</a></li>
           </ul>
         </div>
       </div>
     </nav>
 
     <!-- Header Banner -->
-    <header class="people-header">
+    <!--<header class="people-header">
       <div class="container">
         <h1>People</h1>
       </div>
-    </header>
+    </header>-->
+
+    <div class="spacer"></div>
+    <style>
+    .spacer {
+      height: 60px; /* Adjust height as needed */
+    }
+    </style>
 
     <!-- Main Content -->
-    <main class="container mt-5">
+    <main class="people-content">
       <!-- Principal Investigator Section -->
-      <section
-        id="pi"
-        class="mb-5">
+       
+      <section id="pi" class="mb-5">
         <h2 class="section-title">Principal Investigator</h2>
         <div class="row align-items-center">
           <div class="col-md-4">
             <img
               src="images/1234.jpg"
               alt="Lu Xu"
-              class="img-fluid rounded profile-image" />
+              class="img-fluid rounded profile-image"
+            />
           </div>
           <div class="col-md-8">
             <h3>Xiaopu LYU</h3>
@@ -111,14 +68,16 @@
               <h4>Education</h4>
               <ul>
                 <li>
-                  Ph.D. Environmental Engineering, The Hong Kong Polytechnic University,
-                  2018
+                  Ph.D. Environmental Engineering, The Hong Kong Polytechnic
+                  University, 2018
                 </li>
                 <li>
-                  MPhil. Environmental Engineering, Wuhan University ,
-                  2014
+                  MPhil. Environmental Engineering, Wuhan University, 2014
                 </li>
-                <li>B.E. Chemical Engineering, Zhejiang University of Technology, 2012</li>
+                <li>
+                  B.E. Chemical Engineering, Zhejiang University of Technology,
+                  2012
+                </li>
               </ul>
             </div>
             <div class="contact">
@@ -129,32 +88,148 @@
               <a
                 href="CV/CV_Dr. Xiaopu LYU.pdf"
                 target="_blank"
-                class="btn btn-outline-primary me-2">
-                CV (link)
+                class="btn btn-outline-primary me-2"
+              >
+                CV 
               </a>
               <a
                 class="btn btn-outline-primary"
-                href="https://scholar.google.com.hk/citations?user=porzF74AAAAJ&hl=en&oi=sra"
-                target="_blank">
-                Google Scholar
+                <a href="https://scholar.google.com.hk/citations?user=porzF74AAAAJ&hl=en&oi=sra" 
+                class="underline" target="_blank">Google Scholar</a>
               </a>
             </div>
           </div>
+
+          <div class="spacer"></div>
+          <style>
+          .spacer {
+            height: 40px; /* Adjust height as needed */
+          }
+          </style>
+
+          <!--<div class="spacer"></div>
+          <style>
+          .spacer {
+            margin-bottom: 20px; /* Adjust margin as needed */
+          }
+          </style>-->          
+
+          <p style="text-align: justify;">Dr. Lyu held various positions at the Hong Kong Polytechnic University from September 2017 to January 2023, including Research Assistant, Postdoctoral Fellow, Research Fellow, and Assistant Professor, before joining Hong Kong Baptist University. His career has focused on air quality research, specifically investigating atmospheric reactive organic species and secondary air pollution. To date, Dr. Lyu has published over 70 scientific papers in internationally renowned journals such as One Earth, Environmental Science & Technology, and Journal of Geophysical Research: Atmospheres. His research has garnered over 3100 citations, with an h-index of 30. He has successfully led numerous competitive research grants, including 2 RGC/GRFs, 1 RGC/CRF (co-host), 1 PPR, and 1 NSFC/Youth Science Fund. Dr. Lyu actively contributes to the scientific community as a Young Editor for The Innovation, a member of the Editorial Board for Frontiers in Sustainable Cities, and a member of the Australia-China Air Quality Science and Management Centre.</p>
         </div>
       </section>
 
       <!-- Graduate Students Section -->
-      <section
-        id="graduate"
-        class="mb-5">
+      <style>
+        .member-image {
+          width: 260px; /* 设置固定宽度 */
+          height: 260px; /* 设置固定高度 */
+          object-fit: cover; /* 保持图片比例并覆盖 */
+        }
+        .containe {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+      </style>
+      
+      <!-- Graduate Students Section -->
+      <!--<section id="graduate" class="mb-5">
+        <h2 class="section-title">Team Members</h2>
+      
+         左边对齐的成员 -->
+        <!--<div class="row mb-4">
+          <div class="col-md-6 d-flex align-items-center">
+            <img src="images/LHY.jpg" alt="Member One" class="img-fluid rounded member-image me-3" />
+            <div>
+              <h5 class="card-title">Hongyong Li</h5>
+              <p>Exchange PhD Student</p>
+              <p>dadasdkasdadasdasdasdasdasdasdasdadasdadasdasdsadasda</p>
+            </div>
+          </div>
+        </div>
+        <hr> <!-- 横杠 -->
+      
+        <!-- 右边对齐的成员 -->
+        <!--<div class="row mb-4">
+          <div class="containe">
+            <div>
+              <h5 class="card-title">Runjing Zhou</h5>
+              <p>PhD Student</p>
+            </div>
+            <img src="images/ZRJ.webp" alt="Member Two" class="img-fluid rounded member-image me-3" />
+          </div>
+        </div>
+        <hr> <!-- 横杠 -->
+
+        <!-- 左边对齐的成员 -->
+        <!--<div class="row mb-4">
+          <div class="col-md-6 d-flex align-items-center">
+            <img src="images/ZFY.webp" alt="Member One" class="img-fluid rounded member-image me-3" />
+            <div>
+              <h5 class="card-title">Fengyang Zhang</h5>
+              <p>PhD Student</p>
+            </div>
+          </div>
+        </div>
+        <hr> <!-- 横杠 -->
+
+        <!-- 右边对齐的成员 -->
+        <!--<div class="row mb-4">
+          <div class="containe">
+            <div>
+              <h5 class="card-title">Haibin Huang</h5>
+              <p>PhD Student</p>
+            </div>
+            <img src="images/HHB.webp" alt="Member Two" class="img-fluid rounded member-image me-3" />
+          </div>
+        </div>
+        <hr> <!-- 横杠 -->
+
+        <!-- 左边对齐的成员 -->
+        <!--<div class="row mb-4">
+          <div class="col-md-6 d-flex align-items-center">
+            <img src="images/SMQ.jpg" alt="Member One" class="img-fluid rounded member-image me-3" />
+            <div>
+              <h5 class="card-title">Maiqi Sun</h5>
+              <p>PhD Student</p>
+            </div>
+          </div>
+        </div>
+        <hr> <!-- 横杠 -->
+
+        <!-- 右边对齐的成员 -->
+        <!--<div class="row mb-4">
+          <div class="containe">
+            <div>
+              <h5 class="card-title">Lin Yao</h5>
+              <p>PhD Student</p>
+            </div>
+            <img src="images/YL.jpg" alt="Member Two" class="img-fluid rounded member-image me-3" />
+          </div>
+        </div>
+        <hr> <!-- 横杠 -->
+
+        <!-- 左边对齐的成员 -->
+        <!--<div class="row mb-4">
+          <div class="col-md-6 d-flex align-items-center">
+            <img src="images/ZYC.jpg" alt="Member One" class="img-fluid rounded member-image me-3" />
+            <div>
+              <h5 class="card-title">Yuchen Zhang</h5>
+              <p>Research Assistant</p>
+            </div>
+          </div>
+        </div>
+        <hr> <!-- 横杠 -->
+      
+        <!-- 继续添加其他成员 -->
+      </section>
+              
+      <section id="graduate" class="mb-5">
         <h2 class="section-title">Team Members</h2>
         <div class="row">
           <div class="col-md-4 mb-4">
             <div class="card">
-              <img
-                src="images/LHY.jpg"
-                alt="Hongyong Li"
-                class="card-img-top" />
+              <img src="images/LHY.jpg" alt="Hongyong Li" class="card-img-top" />
               <div class="card-body">
                 <h5 class="card-title">
                   <a href="students/hong-yong-li.html">Hongyong Li</a>
@@ -166,10 +241,7 @@
 
           <div class="col-md-4 mb-4">
             <div class="card">
-              <img
-                src="images/ZRJ.webp"
-                alt="Runjing Zhou"
-                class="card-img-top" />
+              <img src="images/ZRJ.webp" alt="Runjing Zhou" class="card-img-top" />
               <div class="card-body">
                 <h5 class="card-title">
                   <a href="students/run-jing-zhou.html">Runjing Zhou</a>
@@ -181,10 +253,7 @@
 
           <div class="col-md-4 mb-4">
             <div class="card">
-              <img
-                src="images/ZFY.webp"
-                alt="Fengyang Zhang"
-                class="card-img-top" />
+              <img src="images/ZFY.webp" alt="Fengyang Zhang" class="card-img-top" />
               <div class="card-body">
                 <h5 class="card-title">
                   <a href="students/feng-yang-zhang.html">Fengyang Zhang</a>
@@ -196,10 +265,7 @@
 
           <div class="col-md-4 mb-4">
             <div class="card">
-              <img
-                src="images/HHB.webp"
-                alt="Haibin Huang"
-                class="card-img-top" />
+              <img src="images/HHB.webp" alt="Haibin Huang" class="card-img-top" />
               <div class="card-body">
                 <h5 class="card-title">
                   <a href="students/hai-bin-huang.html">Haibin Huang</a>
@@ -211,10 +277,7 @@
 
           <div class="col-md-4 mb-4">
             <div class="card">
-              <img
-                src="images/SMQ.jpg"
-                alt="Maiqi Sun"
-                class="card-img-top" />
+              <img src="images/SMQ.jpg" alt="Maiqi Sun" class="card-img-top" />
               <div class="card-body">
                 <h5 class="card-title">
                   <a href="students/mai-qi-sun.html">Maiqi Sun</a>
@@ -226,10 +289,7 @@
 
           <div class="col-md-4 mb-4">
             <div class="card">
-              <img
-                src="images/YL.jpg"
-                alt="Lin Yao"
-                class="card-img-top" />
+              <img src="images/YL.jpg" alt="Lin Yao" class="card-img-top" />
               <div class="card-body">
                 <h5 class="card-title">
                   <a href="students/lin-yao.html">Lin Yao</a>
@@ -241,10 +301,7 @@
 
           <div class="col-md-4 mb-4">
             <div class="card">
-              <img
-                src="images/ZYC.jpg"
-                alt="Yuchen Zhang"
-                class="card-img-top" />
+              <img src="images/ZYC.jpg" alt="Yuchen Zhang" class="card-img-top" />
               <div class="card-body">
                 <h5 class="card-title">
                   <a href="students/yu-chen-zhang.html">Yuchen Zhang</a>
@@ -253,15 +310,10 @@
               </div>
             </div>
           </div>
-
         </div>
       </section>
-
-      
     </main>
 
-    <script
-      type="module"
-      src="/main.js"></script>
+    <script type="module" src="/main.js"></script>
   </body>
 </html>

@@ -1,9 +1,9 @@
 /* Opportunities Page Styles */
 .Perspective-header {
-    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../images/yun.jpg');
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../images/bj简约.jpg');
     background-size: cover;
     background-position: center;
-    height: 300px;
+    height: 150px;
     display: flex;
     align-items: center;
     justify-content: center;

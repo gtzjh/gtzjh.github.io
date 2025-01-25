@@ -1,9 +1,9 @@
 /* Projects Topic Page Styles */
 .projects-topic-header {
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../images/4\ \(1\).jpg');
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../images/bj简约.jpg');
     background-size: cover;
     background-position: center;
-    height: 400px;
+    height: 300px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -21,7 +21,7 @@
 
 .projects-content {
     padding: 4rem 0;
-    max-width: 1200px;
+    max-width: 900px;
     margin: 0 auto;
 }
 
@@ -33,6 +33,7 @@
     color: #444;
     line-height: 1.8;
     margin-bottom: 2rem;
+    text-align: justify;
 }
 
 .content-with-image {

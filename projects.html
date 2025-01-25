@@ -2,29 +2,44 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Projects - EASE</title>
-    <link
-      href="css/bootstrap.min.css"
-      rel="stylesheet" />
-    <link
-      href="css/style.css"
-      rel="stylesheet" />
-    <link
-      href="css/projects.css"
-      rel="stylesheet" />
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="css/projects.css" rel="stylesheet" />
+    <link href="css/people.css" rel="stylesheet" />
+    
+    <style>
+      .content-container {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+      .card-img-top {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+      }
+      .card-img-SP {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+        max-height: 200px;
+      }
+      .card {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+      }
+      .card-body {
+        flex-grow: 1;
+      }
+    </style>
   </head>
   <body>
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
       <div class="container">
-        <a
-          class="navbar-brand"
-          href="index.html">
-          EASE
-        </a>
+        <a class="navbar-brand" href="index.html">EASE</a>
         <button
           class="navbar-toggler"
           type="button"
@@ -32,133 +47,126 @@
           data-bs-target="#navbarNav">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div
-          class="collapse navbar-collapse"
-          id="navbarNav">
+        <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a
-                class="nav-link active"
-                href="index.html">
-                Home
-              </a>
-            </li>
-            <li class="nav-item">
-              <a
-                class="nav-link active"
-                href="news.html">
-                News
-              </a>
-            </li>
-            <li class="nav-item">
-              <a
-                class="nav-link active"
-                href="projects.html">
-                Projects
-              </a>
-            </li>
-            <li class="nav-item">
-              <a
-                class="nav-link"
-                href="publications.html">
-                Publications
-              </a>
-            </li>
-            <li class="nav-item">
-              <a
-                class="nav-link"
-                href="opportunities.html">
-                Opportunities
-              </a>
-            </li>
-            <li class="nav-item">
-              <a
-                class="nav-link"
-                href="data.html">
-                Data
-              </a>
-            </li>
+            <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link active" href="people.html">People</a></li>
+            <li class="nav-item"><a class="nav-link active" href="news.html">News</a></li>
+            <li class="nav-item"><a class="nav-link active" href="projects.html">Projects</a></li>
+            <li class="nav-item"><a class="nav-link" href="data.html">Data</a></li>
+            <li class="nav-item"><a class="nav-link" href="publications.html">Publications</a></li>
+            <li class="nav-item"><a class="nav-link" href="opportunities.html">Opportunities</a></li>
           </ul>
         </div>
       </div>
     </nav>
 
+    <!--留白-->
+    <div class="spacer"></div>
+    <style>
+    .spacer {
+      height: 60px; /* Adjust height as needed */
+    }
+    </style>
+
     <!-- Header Banner -->
-    <header class="projects-header">
+    <!--<header class="projects-header">
       <div class="container">
         <h1>Selected Projects</h1>
       </div>
     </header>
 
-    <!-- Welcome Text -->
-    <div class="welcome-section">
-      <h2></h2>
-      <p>
-        By developing and applying time-/chemically resolved analysis techniques and observation-based/-verified models, we focus our research on atmospheric chemistry of reactive organics and the secondary products, as well as the health, environmental, and climate effects of related air pollution.
-      </p>
-    
-      <h2>CEPU/PPRFS (2023.A2.059.23C)What are the implications of COVID-19 restrictions for ozone pollution</h2>
-      <img
-      src="images/pro1.webp"
-      alt="Air Quality"
-      class="img-fluid projects-image" />
-      <ul>
-        <li>
-          Regional photochemical smog characterized by continuously rising levels of surface ozone (O3) has long been an air quality problem in Hong Kong (HK). Numerous studies attempted to address the combined effects of local chemistry and transboundary transport on O3 pollution in HK. However, a wide range of regional contributions were determined depending on many factors, such as weather patterns, and the estimates were based on assumed emission scenarios of air pollutants. The COVID-19 restrictions, especially the strict lockdowns in mainland China, provide us with a rare opportunity to examine the air quality impacts of human activities. While related work has been extensively carried out, the effects of mainland’s lockdown on O3 formation regime and sensitivity in HK remain to be unraveled. In addition, HK imposed flexible restrictions to ease the epidemic. It is unknown how the measures were different from the strict lockdown in affecting O3 pollution. Further, derived from the air quality impacts of COVID-19 restrictions is a deeper question: Will persistent O3 attainment be achieved even if all local emissions of anthropogenic air pollutants are eliminated? The answer lies in the level of regional background O3. Moreover, O3 pollution in HK is very sensitive to weather. O3 control by reducing anthropogenic emissions must be designed for extreme weather conditions, which however has not been fully understood. In this project, we will i) reveal the changes in O3 and its precursors in HK during the pandemic; ii) compare the impacts of different levels of COVID-19 restriction on O3 pollution, photochemistry, and transboundary transport; iii) determine the regional background O3 and its variations over time; and iv) explore effective solutions to exacerbated O3 pollution under extreme weather conditions. Observations available in air quality monitoring networks will be used to train the explainable machine learning and to constrain and verify model simulations. We will work around the COVID-19 restrictions, i.e., a series of large-scale control experiments, and simulate for extended scenarios. The new knowledge generated from this project will be backed by real data and easily translated into O3 pollution control policies. We expect the findings will support coordinated control of photochemical smog in the Greater Bay Area (GBA), through providing insights on mainland-HK differential control strategies, significance of non-combustion sources, and special intervention for anthropogenic emissions under weather extremes.
-        </li>
-      </ul>
+    <!--留白-->
+    <div class="spacer"></div>
+    <style>
+    .spacer {
+      height: 40px; /* Adjust height as needed */
+    }
+    </style>
 
-      <h2>RGC/GRF (15209223)   What has driven the ozone increase in Hong Kong over the past decade?</h2>
-      <img
-      src="images/pro2.webp"
-      alt="Air Quality"
-      class="img-fluid projects-image" />
-      <ul>
-        <li>
-          Ground-level ozone (O3) has been increased in many regions of China including HK in recent decades, imposing increasingly negative impacts on air quality, human health, and climate. The increase has even been unintentionally accelerated since 2013, due to the nationwide implementation of the Clean Air Action Plan, as well as meteorological variations. Conversely, it is inferred with a few pieces of evidence that O3 in the continental outflows from China mainland stopped increasing or even began to decrease. In HK, air pollution control was started in early 2000s and has been continued to the present. Previous studies including those conducted by the project team examined the changes in O3 and the precursors resulting from certain control measures. However, most of the study periods were only up to 2013/2014. In recent years, the measures to tackle air pollution were extended and strengthened, such as phasing out high-emission diesel vehicles, setting caps of sulfur content for vessel fuels, reducing emissions of power plants, and controlling the contents of volatile organic compounds in solvent products. A handful of studies confirmed the effectiveness of some measures in reducing primary air pollution, but the impacts on O3 air quality are unknown. At least, what we can see from the continuous monitoring data is that O3 kept increasing in HK in the recent decade. It is well documented that O3 pollution in this city relates to not only local emission and chemistry but also regional transport (outflows from China mainland), especially in autumn, and is sensitive to meteorology. Now that national and local air pollution controls were intensively implemented from 2013/2014 onwards, and they failed to curb the rise in HK’s O3 levels, it is therefore essential to solve the puzzle: What has driven the recent O3 increase in HK? With this project, we will find the answer to this question. In brief, the research focuses on determining the recent variations of meteorology-corrected O3 concentrations in HK and upwind regions in autumn, examining the changes in chemical profiles of O3 precursors, elucidating the impacts of the above changes on in-situ and transport photochemistry, and quantitatively understanding the roles of multiple drivers in modulating the recent O3 increase in HK. The project will have strong policy implications with respect to effective O3 control and could become a paradigm for uncovering the mystery of rising O3 that is emerging in many places of the world.
-        </li>
-      </ul>
+    <div class="content-container">
+      <!-- Welcome Text -->
+      <div class="projects-content">
+        <p></p> 
+        <h1>Selected Projects</h1>
+      </div>
+      
+      <section id="graduate" class="mb-5">
+        <h2 class="section-title"></h2>
+        <div class="row">
+          <p>
+            By developing and applying time-/chemically resolved analysis techniques and observation-based/-verified models, we focus our research on atmospheric chemistry of reactive organics and the secondary products, as well as the health, environmental, and climate effects of related air pollution.
+          </p>
+          <!--留白-->
+          <div class="spacer"></div>
+          <style>
+          .spacer {
+            height: 20px; /* Adjust height as needed */
+          }
+          </style>
+          <div class="col-md-4 mb-4">
+            <div class="card">
+              <img src="images/pro1.webp" alt="Hongyong Li" class="card-img-top" />
+              <div class="card-body">
+                <h5 class="card-title">
+                  <a href="research/oxidation-mechanism.html">CEPU/PPRFS (2023.A2.059.23C)</a>
+                  <p>What are the implications of COVID-19 restrictions for ozone pollution</p>
+                </h5>
+              </div>
+            </div>
+          </div>
 
-      <h2>RGC/GRF (15219621)   Rise in summertime ozone levels in South China: Impacts of long-range transpor</h2>
-      <img
-      src="images/pro3.webp"
-      alt="Air Quality"
-      class="img-fluid projects-image" />
-      <ul>
-        <li>
-          Tropospheric ozone (O3) pollution has been a long-standing environmental issue for decades in many parts of the world. China is one of the countries that are shrouded in elevated ground-level O3. Moreover, O3 increases across China have been well documented in recent decades. O3 pollution in South China was most serious in autumn. It was thought that the relatively clean air from South China Sea diluted the air pollution including O3 and O3 precursors in summer, resulting in lower O3 levels in South China than those in inland cities. In autumn, continental outflows induced by continental anticyclone and typhoons, together with warm climate, were most conducive to O3 production and accumulation in South China. Since 2013, an ambitious clean air action has been enforced in China, leading to significant reductions in emissions of many primary air pollutants. A handful of studies indicated that O3 in continental outflows in South China stopped increasing. Such changes meant that the autumnal O3 pollution in South China might be alleviated. Indeed, our preliminary analyses uncovered that the number of autumnal O3 non-attainment days in Hong Kong (an example of cities in South China) decreased from 2000–2009 to 2010–2019. In contrast, this number increased in summer. A recent paper also alerted us O3 was increasing in summer at the rate higher than that in any other seasons in Hong Kong. Despite that the summertime O3 levels are still much lower than those in autumn, the increasing number of O3 non-attainment days and rising O3 levels in summer, opposite to the downward trends in autumn, call for attention. However, very few studies focused on summertime O3 pollution in South China. A recent study deduced that the growth of Southeast Asia (SEA) emissions was the driving factor of rising summertime O3 in Hong Kong. However, this conclusion was only based on the difference in O3 trends between observation and simulation with fixed SEA emissions. We will put emphases on chemical characterization of SEA emissions and their aging products in South China, figuring out the occurrence, transport and aging processes of SEA emissions, and quantifying the impacts of SEA emissions on O3 pollution in South China in this project, through analyses of historical data, field observation, and application of box and chemical transport models. The successful completion of this project will clearly reveal the relationships between the rising summertime O3 in South China and SEA emissions.
-        </li>
-      </ul>
+          <div class="col-md-4 mb-4">
+            <div class="card">
+              <img src="images/pro2.webp" alt="Runjing Zhou" class="card-img-SP" />
+              <div class="card-body">
+                <h5 class="card-title">
+                  <a href="students/run-jing-zhou.html">RGC/GRF (15209223)</a>
+                  <p>What has driven the ozone increase in Hong Kong over the past decade?</p>
+                </h5>
+              </div>
+            </div>
+          </div>  
 
-      <h2>RGC/CRF (C5024-21G)   Is the usual social distance sufficient to avoid airborne infection of expira</h2>
-      <img
-      src="images/pro4.webp"
-      alt="Air Quality"
-      class="img-fluid projects-image" />
-      <ul>
-        <li>
-          As airborne transmission of expiratory droplets is one of the important pathways for viral respiratory diseases including the recent pandemic COVID-19 to infect healthy people, it is extremely important to explore and understand the detailed mechanisms of virus spread through airborne expiratory droplets. To reduce the risk of exposure to viral respiratory diseases, the World Health Organization recommends main measures, namely hand hygiene, social distancing, and wearing masks. Among the recommended measures, there is a hot debate about social distancing related to the exposure risk, especially in indoor environments. Through expiratory activities, airborne virus-laden droplets may spread over long distances, such as tens of meters in indoor environments, and remain in the air for a long time, making it an important route of exposure. Unfortunately, the scientific evidence on many public health policies regarding social distancing is still fragmentary. The public has only a rudimentary understanding of airborne transmission of viral respiratory diseases and proper social distancing. To address the concern of “whether the usual social distance is sufficient to avoid airborne infection of expiratory droplets in indoor environments”, this project will use systematic, multidisciplinary experimental, theoretical and modelling approaches. The spatiotemporal variations of size distributions, velocity vector fields and airborne dynamics of expiratory droplets generated from people infected with Influenza A or B, and the quantities of influenza virus at different distances from the test subjects will be firstly measured using a suite of the state-of-the-art instruments and methods. Bacteriophage phi 6 will then be used as a surrogate of coronavirus and other human pathogenic enveloped viruses to investigate the survivability and number of viruses in size-resolved droplets at different time and locations from the release point under different environmental conditions (e.g. temperature and relative humidity) with the aid of cultivation method and RT-qPCR technique. Lastly, a versatile model of whole-range airborne transmission will be developed and validated with experimental data to predict the airborne transmission of virus-laden expiratory droplets and the risk of exposure to viable viruses. Different from previous models, more parameters will be integrated, especially including survivability and number of viruses in size-resolved droplets at various distances and time, and impact of droplet concentration on the drag force on droplets under different environmental conditions, into the model for more realistic simulations. The outcomes of the project will be the knowledge necessary to determine proper social distancing in various indoor environments, which will contribute to the control of respiratory infectious diseases.
-        </li>
-      </ul>
+          <div class="col-md-4 mb-4">
+            <div class="card">
+              <img src="images/pro3.webp" alt="Runjing Zhou" class="card-img-top" />
+              <div class="card-body">
+                <h5 class="card-title">
+                  <a href="students/run-jing-zhou.html">RGC/GRF (15219621)</a>
+                  <p>Rise in summertime ozone levels in South China: Impacts of long-range transpor</p>
+                </h5>
+              </div>
+            </div>
+          </div>
 
-      <h2>NSFC/Young Scientists Fund (42207111)   華中地區高海拔背景大氣中過氧乙酰硝酸酯的化學過程及對臭氧生成的影響</h2>
-      <img
-      src="images/pro5.webp"
-      alt="Air Quality"
-      class="img-fluid projects-image" />
-      <ul>
-        <li>
-          Regional photochemical smog characterized by continuously rising levels of surface ozone (O3) has long been an air quality problem in Hong Kong (HK). Numerous studies attempted to address the combined effects of local chemistry and transboundary transport on O3 pollution in HK. However, a wide range of regional contributions were determined depending on many factors, such as weather patterns, and the estimates were based on assumed emission scenarios of air pollutants. The COVID-19 restrictions, especially the strict lockdowns in mainland China, provide us with a rare opportunity to examine the air quality impacts of human activities. While related work has been extensively carried out, the effects of mainland’s lockdown on O3 formation regime and sensitivity in HK remain to be unraveled. In addition, HK imposed flexible restrictions to ease the epidemic. It is unknown how the measures were different from the strict lockdown in affecting O3 pollution. Further, derived from the air quality impacts of COVID-19 restrictions is a deeper question: Will persistent O3 attainment be achieved even if all local emissions of anthropogenic air pollutants are eliminated? The answer lies in the level of regional background O3. Moreover, O3 pollution in HK is very sensitive to weather. O3 control by reducing anthropogenic emissions must be designed for extreme weather conditions, which however has not been fully understood. In this project, we will i) reveal the changes in O3 and its precursors in HK during the pandemic; ii) compare the impacts of different levels of COVID-19 restriction on O3 pollution, photochemistry, and transboundary transport; iii) determine the regional background O3 and its variations over time; and iv) explore effective solutions to exacerbated O3 pollution under extreme weather conditions. Observations available in air quality monitoring networks will be used to train the explainable machine learning and to constrain and verify model simulations. We will work around the COVID-19 restrictions, i.e., a series of large-scale control experiments, and simulate for extended scenarios. The new knowledge generated from this project will be backed by real data and easily translated into O3 pollution control policies. We expect the findings will support coordinated control of photochemical smog in the Greater Bay Area (GBA), through providing insights on mainland-HK differential control strategies, significance of non-combustion sources, and special intervention for anthropogenic emissions under weather extremes.
-        </li>
-      </ul>
-    
+          <div class="col-md-4 mb-4">
+            <div class="card">
+              <img src="images/pro4.webp" alt="Runjing Zhou" class="card-img-SP" />
+              <div class="card-body">
+                <h5 class="card-title">
+                  <a href="students/run-jing-zhou.html">RGC/CRF (C5024-21G)</a>
+                  <p>Is the usual social distance sufficient to avoid airborne infection of expira</p>
+                </h5>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-md-4 mb-4">
+            <div class="card">
+              <img src="images/pro5.webp" alt="Runjing Zhou" class="card-img-SP" />
+              <div class="card-body">
+                <h5 class="card-title">
+                  <a href="students/run-jing-zhou.html">NSFC/Young Scientists Fund (42207111)</a>
+                  <p>華中地區高海拔背景大氣中過氧乙酰硝酸酯的化學過程及對臭氧生成的影響</p>
+                </h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
 
-
-
-
-    <script
-      type="module"
-      src="/main.js"></script>
+    <script type="module" src="/main.js"></script>
   </body>
 </html>
