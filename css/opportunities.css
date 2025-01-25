@@ -49,6 +49,7 @@
     color: #444;
     line-height: 1.8;
     margin-bottom: 1.5rem;
+    font-size: 18px;
 }
 
 .contact-info {
@@ -62,6 +63,13 @@
     color: #2c3e50;
     font-size: 1.4rem;
     margin-bottom: 1rem;
+}
+
+.contact-info p {
+    color: #444;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+    font-size: 18px;
 }
 
 .current-openings {

@@ -8,8 +8,9 @@
     <link href="css/style.css" rel="stylesheet" />
     <link href="css/perspective.css" rel="stylesheet" />
     <link href="css/people.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 </head>
-<body>
+<body style="margin-top: 20px;">
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
       <div class="container">
@@ -38,6 +39,24 @@
         </div>
       </div>
     </nav>
+
+    <!-- Search Modal -->
+    <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="searchModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="searchModalLabel">Search</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <input type="text" id="searchInput" class="form-control" placeholder="Enter search term...">
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" onclick="performSearch()">Search</button>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- Header Banner -->
     <!--<header class="Perspective-header">
@@ -122,6 +141,22 @@
         
     </main>
 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.min.js"></script>
     <script type="module" src="/main.js"></script>
+    <script>
+    function performSearch() {
+        const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+        const bodyText = document.body.innerText.toLowerCase();
+        
+        if (searchTerm && bodyText.includes(searchTerm)) {
+            alert(`Found "${searchTerm}" on this page.`);
+            // Optionally, you can add code to highlight the search term on the page
+        } else {
+            alert(`"${searchTerm}" not found on this page.`);
+        }
+    }
+    </script>
 </body>
 </html>

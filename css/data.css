@@ -1,6 +1,6 @@
 /* Opportunities Page Styles */
 .data-header {
-    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../images/bj简约.jpg');
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('images/bj简约.jpg');
     background-size: cover;
     background-position: center;
     height: 150px;
@@ -23,7 +23,7 @@
 }
 
 .data-section {
-    margin-top: 4rem;
+    margin-top: 1rem;
     margin-bottom: 2.5rem;
 }
 
