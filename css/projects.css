@@ -18,13 +18,22 @@
 
 .projects-content {
     padding: 1.5rem 0;
-    max-width: 1200px;
+    max-width: 900px;
     margin: 0 auto;
-    text-align: center;
+    text-align: left;
+}
+
+.projects-content h1 {
+    color: #2c3e50;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    text-align: left;
+    border-bottom: 2px solid black;
+    padding-bottom: 0.5rem;
 }
 
 .projects-grid {
-    padding: 4rem 0;
+    padding: 2rem 0;
 }
 
 .projects-card {
@@ -40,8 +49,6 @@
     float: left;
     margin-right: 20px;
 }
-
-
 
 .projects-image:hover {
     transform: scale(1.05);

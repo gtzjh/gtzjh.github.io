@@ -1,6 +1,6 @@
 /* Opportunities Page Styles */
 .opportunities-header {
-    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../images/bj简约.jpg');
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('images/bj简约.jpg');
     background-size: cover;
     background-position: center;
     height: 150px;
@@ -20,17 +20,28 @@
     padding: 4rem 0;
     max-width: 900px;
     margin: 0 auto;
+    text-align: left;
+}
+
+.opportunities-content h1 {
+    color: #2c3e50;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    margin-top: 1.2rem;
+    text-align: left;
+    border-bottom: 2px solid black;
+    padding-bottom: 0.5rem;
 }
 
 .opportunities-section {
-    margin-bottom: 2.5rem;
+    margin-bottom: 1.5rem;
 }
 
 .opportunities-section h2 {
     color: #2c3e50;
     font-size: 1.8rem;
     margin-bottom: 1.5rem;
-    border-bottom: 2px solid #3498db;
+    border-bottom: 2px solid black;
     padding-bottom: 0.5rem;
 }
 
@@ -72,7 +83,7 @@
     content: "•";
     position: absolute;
     left: 0;
-    color: #3498db;
+    color: black;
 }
 
 /* Responsive Adjustments */

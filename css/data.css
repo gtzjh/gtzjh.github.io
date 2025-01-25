@@ -18,11 +18,12 @@
 
 .data-content {
     padding: 4rem 0;
-    max-width: 50%;
+    max-width: 900px;
     margin: 0 auto;
 }
 
 .data-section {
+    margin-top: 4rem;
     margin-bottom: 2.5rem;
 }
 
@@ -73,6 +74,15 @@
     position: absolute;
     left: 0;
     color: #3498db;
+}
+
+.data-content h1 {
+    color: #2c3e50;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    text-align: left;
+    border-bottom: 2px solid black;
+    padding-bottom: 0.5rem;
 }
 
 /* Responsive Adjustments */
