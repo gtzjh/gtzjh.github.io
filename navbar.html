@@ -1,0 +1,73 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">EASE</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link active" href="people.html">People</a></li>
+        <li class="nav-item"><a class="nav-link active" href="news.html">News</a></li>
+        <li class="nav-item"><a class="nav-link active" href="projects.html">Projects</a></li>
+        <li class="nav-item"><a class="nav-link active" href="data.html">Data</a></li>
+        <li class="nav-item"><a class="nav-link active" href="publications.html">Publications</a></li>
+        <li class="nav-item"><a class="nav-link active" href="opportunities.html">Opportunities</a></li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" id="search-icon"><i class="fas fa-search"></i></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Search Input -->
+<div id="search-container" class="search-container">
+  <input type="text" id="search-input" placeholder="Search..." />
+  <button onclick="performSearch()">Search</button>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js"></script>
+<script>
+  let idx;
+  let searchData;
+
+  // Load the search index
+  fetch('search-index.json')
+    .then(response => response.json())
+    .then(data => {
+      searchData = data;
+      idx = lunr(function () {
+        this.ref('id');
+        this.field('title');
+        this.field('content');
+
+        searchData.forEach(function (doc) {
+          this.add(doc);
+        }, this);
+      });
+    });
+
+  document.getElementById('search-icon').addEventListener('click', function() {
+    document.getElementById('search-container').classList.toggle('active');
+  });
+
+  function performSearch() {
+    const searchTerm = document.getElementById('search-input').value.toLowerCase();
+    if (searchTerm) {
+      const results = idx.search(searchTerm);
+      if (results.length > 0) {
+        let resultHtml = 'Search results:<br>';
+        results.forEach(result => {
+          const item = searchData.find(d => d.id === result.ref);
+          resultHtml += `<a href="${item.url}">${item.title}</a><br>`;
+        });
+        alert(resultHtml);
+      } else {
+        alert('No results found.');
+      }
+    } else {
+      alert('Please enter a search term.');
+    }
+  }
+</script> 

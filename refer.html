@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>增加左右空白的网页</title>
+    <link href="css/navbar.css" rel="stylesheet" />
     <style>
         body {
             margin: 0;
@@ -20,6 +21,15 @@
     </style>
 </head>
 <body>
+    <div id="navbar-placeholder"></div>
+    <script>
+      fetch('navbar.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('navbar-placeholder').innerHTML = data;
+        });
+    </script>
+
     <div class="container">
         <h1>欢迎来到我的网页</h1>
         <p>这是一个示例网页，展示如何增加左右的空白。</p>

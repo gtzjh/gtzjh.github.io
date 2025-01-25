@@ -15,44 +15,21 @@
     <link
       href="../css/student.css"
       rel="stylesheet" />
+    <link
+      href="../css/navbar.css"
+      rel="stylesheet" />
   </head>
   <body>
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-      <div class="container">
-        <a
-          class="navbar-brand"
-          href="../index.html">
-          EASE
-        </a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item"><a class="nav-link active" href="../index.html">Home</a></li>
-            <li class="nav-item"><a class="nav-link active" href="../people.html">People</a></li>
-            <li class="nav-item"><a class="nav-link active" href="../news.html">News</a></li>
-            <li class="nav-item"><a class="nav-link active" href="../projects.html">Projects</a></li>
-            <li class="nav-item"><a class="nav-link" href="../data.html">Data</a></li>
-            <li class="nav-item"><a class="nav-link" href="../publications.html">Publications</a></li>
-            <li class="nav-item"><a class="nav-link" href="../opportunities.html">Opportunities</a></li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-
-    <!-- Header Banner -->
-    <header class="student-header" style="background: none;">
-      <div class="container">
-        <h1>Maiqi Sun</h1>
-      </div>
-    </header>
+    <!-- Include the navigation bar -->
+    <div id="navbar-placeholder"></div>
+    <script>
+      fetch('../navbar.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('navbar-placeholder').innerHTML = data;
+        })
+        .catch(error => console.error('Error loading navbar:', error));
+    </script>
 
     <!-- Student Content -->
     <main class="container student-content">
