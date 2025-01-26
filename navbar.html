@@ -6,13 +6,13 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link active" href="../index.html">Home</a></li>
-        <li class="nav-item"><a class="nav-link active" href="../people.html">People</a></li>
-        <li class="nav-item"><a class="nav-link active" href="../news.html">News</a></li>
-        <li class="nav-item"><a class="nav-link active" href="../projects.html">Projects</a></li>
-        <li class="nav-item"><a class="nav-link active" href="../data.html">Data</a></li>
-        <li class="nav-item"><a class="nav-link active" href="../publications.html">Publications</a></li>
-        <li class="nav-item"><a class="nav-link active" href="../opportunities.html">Opportunities</a></li>
+        <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link active" href="people.html">People</a></li>
+        <li class="nav-item"><a class="nav-link active" href="news.html">News</a></li>
+        <li class="nav-item"><a class="nav-link active" href="projects.html">Projects</a></li>
+        <li class="nav-item"><a class="nav-link active" href="data.html">Data</a></li>
+        <li class="nav-item"><a class="nav-link active" href="publications.html">Publications</a></li>
+        <li class="nav-item"><a class="nav-link active" href="opportunities.html">Opportunities</a></li>
         <li class="nav-item">
           <a class="nav-link" href="#" id="search-icon"><i class="fas fa-search"></i></a>
         </li>
@@ -29,6 +29,14 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js"></script>
 <script>
+  // Adjust links based on the current environment
+  document.addEventListener('DOMContentLoaded', function() {
+    const basePath = window.location.hostname === 'gtzjh.github.io' ? '/demon/' : '/';
+    document.querySelectorAll('.navbar-nav a').forEach(link => {
+      link.href = basePath + link.getAttribute('href');
+    });
+  });
+
   let idx;
   let searchData;
 
