@@ -10,6 +10,33 @@
   /* Add styles for nav links */
 }
 
+.nav-item.dropdown .nav-link.dropdown-toggle {
+  color: black; /* Change text color of "People" to black */
+}
+
+.nav-item.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background-color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  margin-top: 0;
+}
+
+.dropdown-item {
+  padding: 10px 20px;
+  color: #333;
+  text-decoration: none;
+}
+
+.dropdown-item:hover {
+  background-color: #f0f0f0;
+}
+
 #search-container {
   display: none;
   position: absolute;
