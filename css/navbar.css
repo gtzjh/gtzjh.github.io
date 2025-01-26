@@ -64,4 +64,23 @@
 
 body {
     padding-top: 56px; /* Adjust this value to match the height of your navbar */
-} 
+}
+
+/* Assuming the link has a class or ID, e.g., .nav-people */
+.nav-people {
+    color: black; /* Set the text color to black */
+}
+
+/* If the link is active or selected, you might have a class like .active */
+.nav-people.active {
+    color: black; /* Ensure the active state is also black */
+}
+
+/* If you are using IDs or other selectors, adjust accordingly */
+#people-link {
+    color: black;
+}
+
+#people-link.active {
+    color: black;
+}
