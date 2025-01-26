@@ -25,6 +25,23 @@
         .then(response => response.text())
         .then(data => {
           document.getElementById('navbar-placeholder').innerHTML = data;
+          // Adjust links based on the current environment and directory
+          let basePath = '/';
+          if (window.location.hostname === 'gtzjh.github.io') {
+            basePath = '/demon/';
+          }
+          // Remove 'students/' prefix for local development
+          if (window.location.pathname.includes('/students/') && window.location.hostname !== 'gtzjh.github.io') {
+            basePath = '../';
+          }
+          document.querySelectorAll('.navbar-nav a').forEach(link => {
+            link.href = basePath + link.getAttribute('href');
+          });
+          // Adjust brand link
+          const brandLink = document.querySelector('.navbar-brand');
+          if (brandLink) {
+            brandLink.href = basePath + 'index.html';
+          }
         })
         .catch(error => console.error('Error loading navbar:', error));
     </script>
