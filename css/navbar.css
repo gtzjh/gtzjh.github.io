@@ -1,13 +1,5 @@
-.navbar {
-  /* Add your custom styles here */
-}
-
 .navbar-brand {
   font-weight: bold;
-}
-
-.nav-link {
-  /* Add styles for nav links */
 }
 
 .nav-item.dropdown .nav-link.dropdown-toggle {
