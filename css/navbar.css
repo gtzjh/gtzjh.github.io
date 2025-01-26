@@ -53,4 +53,15 @@
 
 #search-icon {
   cursor: pointer;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Ensure the navbar is above other content */
+}
+
+body {
+    padding-top: 56px; /* Adjust this value to match the height of your navbar */
 } 

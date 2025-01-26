@@ -1,6 +1,6 @@
 /* Project Profile Page Styles */
 .project-header {
-    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+    background: none;
     background-size: cover;
     background-position: center;
     height: 90px;
@@ -10,7 +10,6 @@
     margin-top: 56px;
     max-width: 930px;
     margin: 0 auto;
-    border-bottom: 2px solid;
 }
 
 .project-header h1 {
