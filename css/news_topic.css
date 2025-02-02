@@ -1,19 +1,24 @@
 /* newstopic Profile Page Styles */
 .newstopic-header {
-    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+    background: none;
     background-size: cover;
     background-position: center;
-    height: 300px;
+    height: 90px;
     display: flex;
     align-items: center;
     justify-content: center;
     margin-top: 56px;
+    max-width: 930px;
+    margin: 0 auto;
 }
 
 .newstopic-header h1 {
-    color: white;
-    font-size: 4rem;
-    text-align: center;
+    color: #333;
+    text-align: left;
+    padding-left: 0px;
+    font-size: 2rem;
+    margin-left: 0px;
+    margin-top: 10rem;
 }
 
 .newstopic-content {
@@ -23,8 +28,9 @@
 }
 
 .newstopic-profile {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     gap: 3rem;
     margin-bottom: 3rem;
 }
@@ -32,8 +38,8 @@
 .newstopic-image-container {
     position: relative;
     width: 100%;
-    max-height: 500px;
-    max-width: 600px;
+    max-width: 900px;
+    margin: 0 auto;
 }
 
 .profile-image {
@@ -43,16 +49,22 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+.profile-info {
+    text-align: left;
+    width: 100%;
+}
+
 .profile-info h2 {
     color: #2c3e50;
     font-size: 2rem;
     margin-bottom: 2rem;
-    border-bottom: 2px solid #3498db;
+    border-bottom: 2px solid black;
     padding-bottom: 0.5rem;
 }
 
 .info-section {
     margin-bottom: 2rem;
+    text-align: left;
 }
 
 .info-section h3 {
@@ -92,7 +104,7 @@
         gap: 2rem;
     }
 
-    .profile-image-container {
+    .newstopic-image-container {
         margin: 0 auto;
     }
 }
@@ -103,10 +115,16 @@
     }
 
     .newstopic-header h1 {
-        font-size: 3rem;
+        font-size: 2rem;
     }
 
     .newstopic-content {
         padding: 2rem 1rem;
     }
+}
+
+/* Add this rule to adjust the font size of h2 elements in the welcome-section */
+.welcome-section h2 {
+    font-size: 1.5rem; /* Adjust the size as needed */
+    margin-top: 2.5rem; /* Use relative units for spacing */
 }
