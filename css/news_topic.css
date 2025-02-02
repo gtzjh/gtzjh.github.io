@@ -80,6 +80,11 @@
     margin-top: 2rem;
 }
 
+/* Use a more specific selector to ensure the 'people' link is black */
+.navbar .navbar-nav .nav-link[href*="people"] {
+    color: black !important;
+}
+
 /* Responsive Adjustments */
 @media (max-width: 992px) {
     .newstopic-profile {
