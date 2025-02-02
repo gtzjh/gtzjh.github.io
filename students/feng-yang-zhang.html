@@ -27,11 +27,8 @@
           document.getElementById('navbar-placeholder').innerHTML = data;
           // Adjust links based on the current environment and directory
           let basePath = '/';
-          if (window.location.hostname === 'gtzjh.github.io') {
-            basePath = '/';
-          }
           // Remove 'students/' prefix for local development
-          if (window.location.pathname.includes('/students/') && window.location.hostname !== 'gtzjh.github.io') {
+          if (window.location.pathname.includes('/students/') && window.location.hostname !== '/') {
             basePath = '../';
           }
           document.querySelectorAll('.navbar-nav a').forEach(link => {

@@ -3,7 +3,7 @@
 }
 
 .nav-item.dropdown .nav-link.dropdown-toggle {
-  color: black; /* Change text color of "People" to black */
+  color: #000000; /* Change text color of "People" to black */
 }
 
 .nav-item.dropdown:hover .dropdown-menu {
@@ -21,38 +21,12 @@
 
 .dropdown-item {
   padding: 10px 20px;
-  color: #333;
+  color: #000000;
   text-decoration: none;
 }
 
 .dropdown-item:hover {
   background-color: #f0f0f0;
-}
-
-#search-container {
-  display: none;
-  position: absolute;
-  top: 60px; /* Adjust based on your navbar height */
-  right: 20px;
-  background-color: white;
-  border: 1px solid #ccc;
-  padding: 10px;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-#search-container.active {
-  display: block;
-}
-
-#search-input {
-  width: 200px;
-  padding: 5px;
-  margin-right: 5px;
-}
-
-#search-icon {
-  cursor: pointer;
 }
 
 .navbar {
@@ -64,23 +38,4 @@
 
 body {
     padding-top: 56px; /* Adjust this value to match the height of your navbar */
-}
-
-/* Assuming the link has a class or ID, e.g., .nav-people */
-.nav-people {
-    color: black; /* Set the text color to black */
-}
-
-/* If the link is active or selected, you might have a class like .active */
-.nav-people.active {
-    color: black; /* Ensure the active state is also black */
-}
-
-/* If you are using IDs or other selectors, adjust accordingly */
-#people-link {
-    color: black;
-}
-
-#people-link.active {
-    color: black;
 }

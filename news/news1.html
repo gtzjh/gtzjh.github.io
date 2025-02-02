@@ -24,10 +24,19 @@
         .then(response => response.text())
         .then(data => {
           document.getElementById('navbar-placeholder').innerHTML = data;
-          // Modify the People link to be black
-          const peopleLink = document.querySelector('a[href="/people.html"]');
-          if (peopleLink) {
-            peopleLink.style.color = 'black';
+          // Adjust links based on the current environment and directory
+          let basePath = '/';
+          // Remove 'students/' prefix for local development
+          if (window.location.pathname.includes('/news/') && window.location.hostname !== '/') {
+            basePath = '../';
+          }
+          document.querySelectorAll('.navbar-nav a').forEach(link => {
+            link.href = basePath + link.getAttribute('href');
+          });
+          // Adjust brand link
+          const brandLink = document.querySelector('.navbar-brand');
+          if (brandLink) {
+            brandLink.href = basePath + 'index.html';
           }
         })
         .catch(error => console.error('Error loading navbar:', error));
@@ -58,6 +67,5 @@
         alt="Air Quality"
         class="img-fluid projects-image" />
         
-
   </body>
 </html>
