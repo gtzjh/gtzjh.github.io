@@ -16,7 +16,7 @@ class SearchManager {
 
     async loadIndex() {
         try {
-            const response = await fetch('./search.json');
+            const response = await fetch('/search.json');
             this.searchData = await response.json();
             
             const self = this;
