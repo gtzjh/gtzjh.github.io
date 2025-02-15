@@ -43,6 +43,18 @@ class SearchManager {
         const searchInput = document.getElementById('global-search');
         const resultsContainer = document.getElementById('search-results');
 
+        // 移除输入框的蓝色边框并调整圆角
+        searchInput.style.outline = 'none';
+        searchInput.style.boxShadow = 'none';
+        searchInput.style.borderRadius = '20px';  // 添加圆角效果
+
+        // 添加定位样式
+        resultsContainer.style.position = 'absolute';
+        resultsContainer.style.width = '60%';  // 将宽度从80%减小到60%
+        resultsContainer.style.top = '100%';   // 位于输入框正下方
+        resultsContainer.style.left = '50%';   // 配合transform实现水平居中
+        resultsContainer.style.transform = 'translateX(-50%)';  // 水平居中
+        
         searchInput.addEventListener('input', (e) => {
             const query = e.target.value.trim();
             if (query.length > 2) {
@@ -81,6 +93,9 @@ class SearchManager {
 
     createResultItem(result) {
         const excerpt = this.createExcerpt(result.content, 100);
+        // 移除 URL 中的 'students/' 前缀
+        const displayUrl = result.url.replace('students/', '');
+        
         return `
             <a class="dropdown-item" href="${result.url}">
                 <div class="search-result-item">

@@ -31,8 +31,13 @@ function extractContent(filePath) {
     const html = fs.readFileSync(filePath, 'utf8');
     const $ = cheerio.load(html);
     
-    // 移除不需要索引的部分
+    // 移除所有导航相关的内容
     $('#navbar-placeholder').remove();
+    $('.navbar').remove();
+    $('.navbar-nav').remove();
+    $('.dropdown-menu').remove();
+    $('.nav-item').remove();
+    $('.nav-link').remove();
     $('script').remove();
     $('style').remove();
     
