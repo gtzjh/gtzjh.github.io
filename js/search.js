@@ -93,11 +93,14 @@ class SearchManager {
 
     createResultItem(result) {
         const excerpt = this.createExcerpt(result.content, 100);
-        // 移除 URL 中的 'students/' 前缀
-        const displayUrl = result.url.replace('students/', '');
+        // 根据当前页面路径调整URL
+        let finalUrl = result.url;
+        if (window.location.pathname.includes('/students/') && window.location.hostname !== 'localhost') {
+            finalUrl = '../' + result.url;
+        }
         
         return `
-            <a class="dropdown-item" href="${result.url}">
+            <a class="dropdown-item" href="${finalUrl}">
                 <div class="search-result-item">
                     <h6>${result.title}</h6>
                     <small class="text-muted">${excerpt}</small>
