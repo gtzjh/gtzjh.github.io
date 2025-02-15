@@ -47,9 +47,18 @@ function extractContent(filePath) {
         .replace(/[^\w\u4e00-\u9fa5]/g, ' ') // 保留中英文和数字
         .trim();
     
+    // 修改这里：确保 url 始终是相对于根目录的路径
+    let url = path.relative(SITE_ROOT, filePath)
+        .replace(/\\/g, '/');  // 统一使用正斜杠
+    
+    // 如果路径以 students/ 开头，移除该前缀
+    if (url.startsWith('students/')) {
+        url = url.replace('students/', '');
+    }
+    
     return {
         title: $('title').text(),
-        url: path.relative(SITE_ROOT, filePath),
+        url: url,
         content: content
     };
 }
