@@ -28,6 +28,21 @@
         <li class="nav-item"><a class="nav-link active" href="publications.html">Publications</a></li>
         <li class="nav-item"><a class="nav-link active" href="opportunities.html">Opportunities</a></li>
       </ul>
+      <div class="ms-3">
+        <div class="input-group">
+          <input type="text" id="global-search" class="form-control" 
+                 placeholder="Search..." aria-label="Search">
+          <button class="btn btn-outline-primary" type="button" 
+                  onclick="performSearch()">
+            <i class="bi bi-search"></i>
+          </button>
+        </div>
+        <div id="search-results" class="dropdown-menu" 
+             style="width: 300px; max-height: 400px; overflow-y: auto;"></div>
+      </div>
     </div>
   </div>
 </nav>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js"></script>
+<script src="./js/search.js"></script>

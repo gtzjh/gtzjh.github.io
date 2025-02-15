@@ -96,17 +96,9 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.min.js"></script>
     <script type="module" src="/main.js"></script>
     <script>
-    function performSearch() {
-        const searchTerm = document.getElementById('searchInput').value.toLowerCase();
-        const bodyText = document.body.innerText.toLowerCase();
-        
-        if (searchTerm && bodyText.includes(searchTerm)) {
-            alert(`Found "${searchTerm}" on this page.`);
-            // Optionally, you can add code to highlight the search term on the page
-        } else {
-            alert(`"${searchTerm}" not found on this page.`);
-        }
-    }
+
     </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js"></script>
+    <script src="js/search.js"></script>
 </body>
 </html>
