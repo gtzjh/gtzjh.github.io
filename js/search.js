@@ -17,7 +17,21 @@ class SearchManager {
     async loadIndex() {
         try {
             const response = await fetch('/search.json');
-            this.searchData = await response.json();
+            const rawData = await response.json();
+            
+            // 添加调试日志
+            console.log('Raw search data:', rawData);
+            
+            this.searchData = rawData.map(doc => {
+                const newUrl = doc.url.startsWith('/') ? doc.url : '/' + doc.url;
+                console.log('Original URL:', doc.url, 'New URL:', newUrl); // 调试日志
+                return {
+                    ...doc,
+                    url: newUrl
+                };
+            });
+            
+            console.log('Processed search data:', this.searchData); // 调试日志
             
             const self = this;
             this.index = lunr(function() {
