@@ -15,7 +15,9 @@
     <link
       href="../css/student.css"
       rel="stylesheet" />
-    <link href="../css/navbar.css" rel="stylesheet" />
+    <link
+      href="../css/navbar.css"
+      rel="stylesheet" />
   </head>
   <body>
     <!-- Include the navigation bar -->
@@ -27,7 +29,6 @@
           document.getElementById('navbar-placeholder').innerHTML = data;
           // Adjust links based on the current environment and directory
           let basePath = '/';
-          // Remove 'students/' prefix for local development
           if (window.location.pathname.includes('/students/') && window.location.hostname !== '/') {
             basePath = '../';
           }

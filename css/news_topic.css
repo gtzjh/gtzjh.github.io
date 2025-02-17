@@ -18,7 +18,7 @@
     padding-left: 0px;
     font-size: 2rem;
     margin-left: 0px;
-    margin-top: 10rem;
+    margin-top: 3rem;
 }
 
 .newstopic-content {
@@ -125,6 +125,6 @@
 
 /* Add this rule to adjust the font size of h2 elements in the welcome-section */
 .welcome-section h2 {
-    font-size: 1.5rem; /* Adjust the size as needed */
-    margin-top: 2.5rem; /* Use relative units for spacing */
+    font-size: 1.5rem;
+    margin-top: 0.5rem;
 }

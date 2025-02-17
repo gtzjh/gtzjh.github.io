@@ -9,6 +9,20 @@
     <link href="css/perspective.css" rel="stylesheet" />
     <link href="css/people.css" rel="stylesheet" />
     <link href="css/navbar.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Source+Sans+Pro:wght@400;600&family=Georgia&display=swap" rel="stylesheet">
+    <style>
+        /* 移除大部分自定义样式，只保留特定的样式 */
+        .fixed-size-img {
+            width: 300px;
+            height: 200px;
+            object-fit: cover;
+        }
+        .title-spacing {
+            margin-top: 8px;
+            color: #0c0cab;
+            font-family: "Times New Roman", Times, serif;
+        }
+    </style>
 </head>
 <body style="margin-top: 20px;">
     <!-- Include the navigation bar -->
@@ -24,35 +38,22 @@
      
     <main>
         <div class="welcome-section">
-            <h1 class="text-center mb-4"></h1>
+            <h1 class="text-center mb-1"></h1>
 
-            <style>
-                .fixed-size-img {
-                  width: 300px;
-                  height: 200px;
-                  object-fit: cover;
-                }
-                .title-spacing {
-                  margin-top: 30px;  /* 在标题上方添加30px的外边距 */
-                }
-              </style>
-              
-              <div class="row text-center mb-4">
+            <div class="row text-center mb-2">
                 <div class="col-md-4">
-                  <h3 class="title-spacing">Title 1</h3>
-                  <img src="images/pub3.webp" class="fixed-size-img" alt="Description of Image 1" />
+                    <h3 class="title-spacing">Air Quality</h3>
+                    <img src="images/pub3.webp" class="fixed-size-img" alt="Description of Image 1" />
                 </div>
                 <div class="col-md-4">
-                  <h3 class="title-spacing">Title 2</h3>
-                  <img src="images/pub2.webp" class="fixed-size-img" alt="Description of Image 2" />
+                    <h3 class="title-spacing">Climate Change</h3>
+                    <img src="images/pub2.webp" class="fixed-size-img" alt="Description of Image 2" />
                 </div>
                 <div class="col-md-4">
-                  <h3 class="title-spacing">Title 3</h3>
-                  <img src="images/pub4.webp" class="fixed-size-img" alt="Description of Image 3" />
+                    <h3 class="title-spacing">Humen Health</h3>
+                    <img src="images/pub4.webp" class="fixed-size-img" alt="Description of Image 3" />
                 </div>
-              </div>
-              
-              
+            </div>
 
             <!-- Welcome Text -->
             <div class="welcome-section">
@@ -77,13 +78,6 @@
                     e.g., ozone and fine particles (PM2.5), and may have significant health and 
                     climate effects. We are committed to projects on Emerging Air pollution and Sustainable Environment (EASE).
                 </p>
-
-                <!--<h3>EASE's mission includes:</h3>
-                <ul>
-                    <li>Emerging air pollution we don't even know about for now</li>
-                    <li>Air pollution threats to physical and mental health</li>
-                    <li>Economic and social burdens that undermine urban sustainability</li>
-                </ul>-->
             </div>
         </div>
 
@@ -96,9 +90,9 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.min.js"></script>
     <script type="module" src="/main.js"></script>
     <script>
-
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js"></script>
     <script src="js/search.js"></script>
 </body>
 </html>
+

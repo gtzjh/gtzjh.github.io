@@ -5,7 +5,7 @@
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1.0" />
-    <title>CEPU/PPRFS (2023.A2.059.23C)</title>
+    <title>Gas-Phase Oxidation Mechanism - EASE</title>
     <link
       href="../css/bootstrap.min.css"
       rel="stylesheet" />
@@ -13,209 +13,44 @@
       href="../css/style.css"
       rel="stylesheet" />
     <link
-      href="../css/project-content.css"
+      href="../css/projects-topic.css"
       rel="stylesheet" />
-    <link href="../css/navbar.css" rel="stylesheet" />
   </head>
   <body>
-    <!-- Include the navigation bar -->
-    <div id="navbar-placeholder"></div>
-    <script>
-      fetch('../navbar.html')
-        .then(response => response.text())
-        .then(data => {
-          document.getElementById('navbar-placeholder').innerHTML = data;
-          // Adjust links based on the current environment and directory
-          let basePath = '/';
-          // Remove 'students/' prefix for local development
-          if (window.location.pathname.includes('/students/') && window.location.hostname !== '/') {
-            basePath = '../';
-          }
-          document.querySelectorAll('.navbar-nav a').forEach(link => {
-            link.href = basePath + link.getAttribute('href');
-          });
-          // Adjust brand link
-          const brandLink = document.querySelector('.navbar-brand');
-          if (brandLink) {
-            brandLink.href = basePath + 'index.html';
-          }
-        })
-        .catch(error => console.error('Error loading navbar:', error));
-    </script>
-    <style>
-      /* 移除标题背景和调整样式 */
-      .projects-topic-header {
-        background: none;
-        height: auto;
-        padding: 0;
-        margin-top: 56px;
-        width: 100%;
-      }
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+      <div class="container">
+        <a
+          class="navbar-brand"
+          href="../index.html">
+          EASE
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-      .projects-topic-header .container {
-        max-width: 870px;
-        margin: 0 auto;
-        padding: 0;
-        text-align: left;
-      }
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link active" href="../index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link active" href="../people.html">People</a></li>
+            <li class="nav-item"><a class="nav-link active" href="../news.html">News</a></li>
+            <li class="nav-item"><a class="nav-link active" href="../projects.html">Projects</a></li>
+            <li class="nav-item"><a class="nav-link" href="../data.html">Data</a></li>
+            <li class="nav-item"><a class="nav-link" href="../publications.html">Publications</a></li>
+            <li class="nav-item"><a class="nav-link" href="../opportunities.html">Opportunities</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
 
-      .projects-topic-header h1 {
-        font-family: 'Georgia', 'Times New Roman', serif;
-        font-size: 2.2em;
-        font-weight: 600;
-        color: #2c3e50;
-        margin-bottom: 60px;
-        text-align: left;
-        margin-left: -15px;
-        display: inline-block;
-      }
-
-      /* 调整主内容区域样式 */
-      .projects-content {
-        max-width: 870px;
-        margin: 0 auto;
-        padding: 0;
-      }
-
-      /* 确保内容区域的容器保持一致的内边距 */
-      .container {
-        padding: 0;
-      }
-
-      /* 确保文本两端对齐 */
-      .projects-text {
-        font-family: 'Source Sans Pro', Arial, sans-serif;
-        font-size: 1.1em;
-        line-height: 1.8;
-        color: #3c4858;
-        text-align: justify;
-        margin-bottom: 1.5rem;
-      }
-
-      /* 调整图片和文字布局 */
-      .content-with-image {
-        display: block;
-        position: relative;
-        margin: 2rem 0;
-      }
-
-      .text-content {
-        margin: 0;
-      }
-
-      .image-content {
-        float: right;
-        width: 300px;
-        margin: 0 0 20px 20px;
-      }
-
-      .content-with-image.image-left .image-content {
-        float: left;
-        margin: 0 20px 20px 0;
-      }
-
-      .projects-image {
-        width: 100%;
-        height: auto;
-        border-radius: 8px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      }
-
-      .figure-caption {
-        text-align: center;
-        margin-top: 8px;
-        font-size: 0.9em;
-        color: #666;
-      }
-
-      /* 清除浮动 */
-      .projects-section::after {
-        content: "";
-        display: table;
-        clear: both;
-      }
-
-      /* 修改小标题样式 */
-      .section-title {
-        font-family: 'Georgia', 'Times New Roman', serif;
-        font-size: 1.8em;
-        font-weight: 600;
-        color: #2c3e50;
-        margin-bottom: 0.9rem;
-        margin-top: 1.8rem;
-        padding-bottom: 0.5rem;
-        border-bottom: 2px solid #3498db;
-      }
-
-      /* 调整项目区域的间距 */
-      .projects-section {
-        margin-bottom: 2.4rem;
-      }
-
-      /* 修改相关出版物标题样式 */
-      .related-publications h3 {
-        font-family: 'Georgia', 'Times New Roman', serif;
-        font-size: 1.3em;
-        font-weight: 600;
-        color: #2c3e50;
-        margin-top: 1.5rem;
-        margin-bottom: 1rem;
-      }
-
-      /* 修改出版物条目样式 */
-      .publication-item {
-        font-family: 'Source Sans Pro', Arial, sans-serif;
-        font-size: 1.1em;
-        line-height: 1.8;
-        color: #3c4858;
-        margin-bottom: 1rem;
-      }
-
-      /* 修改列表样式 */
-      .projects-text ul {
-        padding-left: 1.5rem;
-        margin-bottom: 1.5rem;
-      }
-
-      .projects-text li {
-        font-family: 'Source Sans Pro', Arial, sans-serif;
-        font-size: 1.1em;
-        line-height: 1.8;
-        color: #3c4858;
-        margin-bottom: 0.8rem;
-      }
-
-      /* 修改链接样式 */
-      a {
-        color: #1a237e;
-        text-decoration: none;
-        transition: color 0.3s ease;
-      }
-
-      a:hover {
-        color: #3949ab;
-        text-decoration: underline;
-      }
-
-      /* 确保导航栏固定在顶部 */
-      .navbar {
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        z-index: 1000;
-      }
-
-      /* 调整body的顶部内边距 */
-      body {
-        padding-top: 56px;
-        margin-top: 0;
-      }
-    </style>
     <!-- Header Banner -->
     <header class="projects-topic-header">
       <div class="container">
-        <h1>CEPU/PPRFS (2023.A2.059.23C)</h1>
+        <h1>Gas-Phase Oxidation Mechanism of Atmospheric Organic Compounds</h1>
       </div>
     </header>
 
@@ -278,7 +113,7 @@
           </div>
           <div class="image-content">
             <img
-              src="../images/pro1.webp"
+              src="../images/6.jpg"
               alt="RO2 Reaction Mechanism"
               class="projects-image" />
             <p class="figure-caption">Figure source: Xu et al. 2019 JPCA</p>
@@ -349,7 +184,7 @@
           </div>
           <div class="image-content">
             <img
-              src="../images/pro2.webp"
+              src="../images/4 (2).jpg"
               alt="Aromatic Chemistry Mechanism"
               class="projects-image" />
             <p class="figure-caption">Figure source: Xu et al. 2020 EST</p>

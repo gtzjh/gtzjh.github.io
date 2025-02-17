@@ -26,7 +26,7 @@
 }
 
 .projects-content {
-    padding: 4rem 0;
+    padding: 2rem 0;
     max-width: 900px;
     margin: 0 auto;
 }
@@ -36,6 +36,7 @@
     font-size: 2rem;
     margin-top: 1.2rem;
     margin-bottom: 1.5rem;
+    margin-left: 0em;
     text-align: left;
     border-bottom: 2px solid #002366;
     padding-bottom: 0.5rem;

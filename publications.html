@@ -16,12 +16,43 @@
       href="css/publications.css"
       rel="stylesheet" />
     <link href="css/navbar.css" rel="stylesheet" />
+    <style>
+      /* 页面整体基础字体 */
+      body {
+        font-family: 'Source Sans Pro', 'Helvetica Neue', Arial, sans-serif;
+        line-height: 1.6;
+      }
+
+      /* 主标题样式 */
+      h1 {
+        font-family: 'Georgia', 'Times New Roman', serif;
+        font-size: 2.2em;
+        font-weight: 600;
+        color: #2c3e50;
+        margin-bottom: 1.2em;
+        text-align: left;
+        margin-left: 15px;
+      }
+
+      /* 正文段落样式 */
+      p {
+        font-family: 'Source Sans Pro', Arial, sans-serif;
+        font-size: 1.1em;
+        line-height: 1.8;
+        color: #3c4858;
+      }
+
+      /* 内容区域样式 */
+      .publications-content {
+        margin-top: 40px;
+      }
+    </style>
   </head>
   <body>
     <!-- Include the navigation bar -->
     <div id="navbar-placeholder"></div>
     <script>
-      fetch('/navbar.html')
+      fetch('navbar.html')
         .then(response => response.text())
         .then(data => {
           document.getElementById('navbar-placeholder').innerHTML = data;
@@ -41,7 +72,7 @@
     
 
     <body>
-      <div class="publications-content">
+      <main class="container publications-content" style="margin-top: 40px;">
         <h1>Selected Publications</h1>
         <div class="publication-section">
           <ul class="publication-list">
@@ -49,7 +80,7 @@
               <img src="images/pub5.webp" alt="出版物1封面">
               <div class="publication-description">
                 <h3>A synergistic ozone-climate control to address emerging ozone pollution challenges</h3>
-                <p>One Earth (2023)</p>
+                <p><i>One Earth</i> (2023)</p>
                 <p>Xiaopu Lyu , Ke Li , Hai Guo , Lidia Morawska , Beining Zhou , Yangzong Zeren , Fei Jiang , Changhong Chen , Allen H. Goldstein , Xiaobin Xu , Tao Wang , Xiao Lu , Tong Zhu , Xavier Querol , Satoru Chatani , Mohd Talib Latif , Daniel Schuch , Vinayak Sinha , Prashant Kumar , Benjamin Mullins , Rodrigo Seguel , Min Shao , Likun Xue , Nan Wang , Jianmin Chen , Jian Gao , Fahe Chai , Isobel Simpson , Baerbel Sinha , Donald R. Blake</p>
                 <div class="links">
                   <a
@@ -64,7 +95,7 @@
               <img src="images/pub1.webp" alt="出版物2封面">
               <div class="publication-description">
                 <h3>Evidence for Reducing Volatile Organic Compounds to Improve Air Quality from Concurrent Observations and In Situ Simulations at 10 Stations in Eastern China</h3>
-                <p>Environmental Science & Technology (2022)</p>
+                <p><i>Environmental Science & Technology</i> (2022)</p>
                 <p>Xiaopu Lyu , Hai Guo , Qiaoli Zou , Ke Li , Enyu Xiong , Beining Zhou , Peiwen Guo , Fei Jiang , Xudong Tian</p>
                 <div class="links">
                   <a
@@ -79,7 +110,7 @@
               <img src="images/pub2.webp" alt="出版物3封面">
               <div class="publication-description">
                 <h3>In Situ Measurements of Molecular Markers Facilitate Understanding of Dynamic Sources of Atmospheric Organic Aerosols</h3>
-                <p>Environmental Science & Technology (2020)</p>
+                <p><i>Environmental Science & Technology</i> (2020)</p>
                 <p>Xiaopu Lyu , Hai Guo , Dawen Yao , Haoxian Lu , Yunxi Huo , Wen Xu , Nathan Kreisberg , Allen H Goldstein , John Jayne , Douglas Worsnop , Yan Tan , Shun-Cheng Lee , Tao Wang </p>
                 <div class="links">
                   <a
@@ -94,7 +125,7 @@
               <img src="images/pub3.webp" alt="出版物4封面">
                 <div class="publication-description">
                   <h3>An Ozone "Pool" in South China: Investigations on Atmospheric Dynamics and Photochemical Processes Over the Pearl River Estuary</h3>
-                  <p>Journal of Geophysical Research: Atmospheres (2019)</p>
+                  <p><i>Journal of Geophysical Research: Atmospheres</i> (2019)</p>
                   <p>Yangzong Zeren, Hai Guo, Xiaopu Lyu, Fei Jiang, Yu Wang, Xufei Liu, Lewei Zeng, Mei Li, Lei Li</p>
                   <div class="links">
                     <a
@@ -109,7 +140,7 @@
               <img src="images/pub4.webp" alt="出版物4封面">
               <div class="publication-description">
                   <h3>Modeling C1-C4 Alkyl Nitrate Photochemistry and Their Impacts on O3 Production in Urban and Suburban Environments of Hong Kong</h3>
-                  <p>Journal of Geophysical Research: Atmospheres (2017)</p>
+                  <p><i>Journal of Geophysical Research: Atmospheres</i> (2017)</p>
                   <p>X. P. Lyu, H. Guo, N. Wang, I. J. Simpson, H. R. Cheng, L. W. Zeng, S. M. Saunders, S. H. M. Lam, S. Meinardi, D. R. Blake</p>
                   <div class="links">
                     <a
@@ -122,14 +153,9 @@
                     <!-- 可以继续添加更多的出版物项 -->
             </ul>
         </div>
-      </div>
-    </body>
-    </html>
-    
-    
+      </main>
 
     
-
 
     <!-- Google Scholar Link -->
       <div class="text-center mb-4">
@@ -142,6 +168,8 @@
         </p>
       </div>
     </main>
+
+    
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>

@@ -5,7 +5,7 @@
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1.0" />
-    <title>EASE</title>
+    <title>Gas-Phase Oxidation Mechanism - EASE</title>
     <link
       href="../css/bootstrap.min.css"
       rel="stylesheet" />
@@ -15,6 +15,36 @@
     <link
       href="../css/news_topic.css"
       rel="stylesheet" />
+    <link href="../css/navbar.css" rel="stylesheet" />
+    <style>
+      /* 移除标题背景和调整样式 */
+      .projects-topic-header {
+        background: none;
+        height: auto;
+        padding: 0;
+        margin-top: 56px;
+        width: 100%;
+      }
+
+      .projects-topic-header .container {
+        max-width: 870px;
+        margin: 0 auto;
+        padding: 0;
+        text-align: left;
+      }
+
+      .projects-topic-header h1 {
+        font-family: 'Georgia', 'Times New Roman', serif;
+        font-size: 2.2em;
+        font-weight: 600;
+        color: #2c3e50;
+        margin-bottom: 15px;
+        text-align: left;
+        margin-left: -15px;
+        display: inline-block;
+      }
+    </style>
+    
   </head>
   <body>
     <!-- Include the navigation bar -->
@@ -42,8 +72,7 @@
         .catch(error => console.error('Error loading navbar:', error));
     </script>
 
-    <!-- Header Banner -->
-    <header class="newstopic-header">
+    <header class="projects-topic-header">
       <div class="container">
         <h1>Dr. Lyu awarded Faculty Performance Award</h1>
       </div>
@@ -63,16 +92,17 @@
         src="../images/news_7.webp"
         alt="Air Quality"
         class="img-fluid projects-image" />
+        
+
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.min.js"></script>
+        <script type="module" src="/main.js"></script>
+        <script>
     
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.min.js"></script>
-    <script type="module" src="/main.js"></script>
-    <script>
-
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js"></script>
-    <script src="/js/search.js"></script>
-
-  </body>
-</html>
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js"></script>
+        <script src="/js/search.js"></script>
+            
+      </body>
+    </html>

@@ -7,26 +7,39 @@
       content="width=device-width, initial-scale=1.0" />
     <title>Lin Yao - EASE</title>
     <link
-      href="/css/bootstrap.min.css"
+      href="../css/bootstrap.min.css"
       rel="stylesheet" />
     <link
-      href="/css/style.css"
+      href="../css/style.css"
       rel="stylesheet" />
     <link
-      href="/css/student.css"
+      href="../css/student.css"
       rel="stylesheet" />
     <link
-      href="/css/navbar.css"
+      href="../css/navbar.css"
       rel="stylesheet" />
   </head>
   <body>
     <!-- Include the navigation bar -->
     <div id="navbar-placeholder"></div>
     <script>
-      fetch('/navbar.html')
+      fetch('../navbar.html')
         .then(response => response.text())
         .then(data => {
           document.getElementById('navbar-placeholder').innerHTML = data;
+          // Adjust links based on the current environment and directory
+          let basePath = '/';
+          if (window.location.pathname.includes('/students/') && window.location.hostname !== '/') {
+            basePath = '../';
+          }
+          document.querySelectorAll('.navbar-nav a').forEach(link => {
+            link.href = basePath + link.getAttribute('href');
+          });
+          // Adjust brand link
+          const brandLink = document.querySelector('.navbar-brand');
+          if (brandLink) {
+            brandLink.href = basePath + 'index.html';
+          }
         })
         .catch(error => console.error('Error loading navbar:', error));
     </script>

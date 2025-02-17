@@ -17,7 +17,7 @@
 }
 
 .publications-content {
-    padding: 4rem 0;
+    padding: 2rem 0;
     margin: 0 auto;
     max-width: 900px;
     text-align: left;
@@ -26,9 +26,10 @@
 /* 添加标题样式 */
 .publications-content h1 {
     color: #2c3e50;
-    font-size: 2rem;
+    font-size: 2.2em;
     margin-top: 1.2rem;
     margin-bottom: 1.5rem;
+    margin-left: 0em;
     text-align: left;
     border-bottom: 2px solid #002366;
     padding-bottom: 0.5rem;
@@ -99,4 +100,23 @@
     .publication-description {
         text-align: center;
     }
+}
+
+.publication-description h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #2c3e50;
+    line-height: 1.4;
+}
+
+.publication-description p {
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+    color: #666;
+    line-height: 1.5;
+}
+
+.publication-description p i {
+    color: #2c3e50;
+    font-weight: 500;
 }
