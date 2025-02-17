@@ -51,10 +51,6 @@ function extractContent(filePath) {
     let url = path.relative(SITE_ROOT, filePath)
         .replace(/\\/g, '/');  // 统一使用正斜杠
     
-    // 如果路径以 students/ 开头，移除该前缀
-    if (url.startsWith('students/')) {
-        url = url.replace('students/', '');
-    }
     
     return {
         title: $('title').text(),
