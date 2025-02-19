@@ -7,8 +7,6 @@ on:
     paths:
       - '**.html'
       - '!search.json'
-  # 添加手动触发选项，方便测试
-  workflow_dispatch:
 
 jobs:
   generate-index:
