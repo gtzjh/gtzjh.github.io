@@ -22,6 +22,10 @@ node scripts/generate-search-index.js
 npm install
 ```
 
-2. 使用 `npx live-server --port=3000` 启动本地预览。
+2. 启动本地预览。
+
+```bash
+npx live-server --port=3000
+```
 
 
