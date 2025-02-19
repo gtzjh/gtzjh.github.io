@@ -89,17 +89,28 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       
-      # 添加构建步骤（根据实际项目需要）
+      - uses: ruby/setup-pages@v1 # 配置Ruby环境
+        with:
+          ruby-version: 3.1 # 与Gemfile指定版本一致
+
+      - name: Bundle install
+        run: |
+          gem install bundler
+          bundle install
+          
       - name: Build site
-        run: npm run build # 替换为实际构建命令
-        
+        uses: actions/jekyll-build-pages@v1 # 使用官方Jekyll构建Action
+        with:
+          source: ./ # Jekyll项目根目录
+          destination: ./_site # 默认构建目录
+          
       - name: Setup Pages
         uses: actions/configure-pages@v4
         
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./dist # 替换为实际构建输出目录
+          path: ./_site # Jekyll默认输出目录
           
       - name: Deploy to GitHub Pages
         id: deployment
