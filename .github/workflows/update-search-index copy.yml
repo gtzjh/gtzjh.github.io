@@ -75,3 +75,32 @@ jobs:
             git reset --hard HEAD
             echo "::notice:: No changes in search.json, skipping commit"
           fi
+
+  deploy:
+    runs-on: ubuntu-latest
+    needs: generate-index
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    
+    steps:
+      - uses: actions/checkout@v4
+      
+      # 添加构建步骤（根据实际项目需要）
+      - name: Build site
+        run: npm run build # 替换为实际构建命令
+        
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+        
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./dist # 替换为实际构建输出目录
+          
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
