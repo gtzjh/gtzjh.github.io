@@ -64,6 +64,16 @@ jobs:
           git config --global user.name "GitHub Actions"
           git config --global user.email "actions@github.com"
           
-          git add .
-          git commit -a
-          git push origin HEAD:main
+          git add search.json
+          
+          if ! git diff-index --quiet HEAD --; then
+            git commit -m "Auto-update search index [skip ci]"
+            git pull origin main --rebase
+            git push origin HEAD:main
+          else
+            # 明确清理未跟踪文件（如果有）
+            git clean -fd
+            # 重置可能存在的意外修改
+            git reset --hard HEAD
+            echo "::notice:: No changes in search.json, skipping commit"
+          fi
