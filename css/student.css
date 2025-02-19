@@ -1,0 +1,124 @@
+/* 页面整体基础字体 */
+body {
+    font-family: 'Source Sans Pro', 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.6;
+    min-height: 100vh;  /* 确保body至少有一个视口高度 */
+    overflow-y: auto;   /* 允许垂直滚动 */
+}
+
+/* 标题区域样式 */
+.student-header {
+    background: none;
+    height: auto;
+    margin-top: 56px;
+    max-width: 900px;
+    margin: 56px auto 0;
+    padding: 0;
+}
+
+.student-header h1 {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: 2.2em;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 1.2em;
+    text-align: left;
+    margin-left: 15px;
+    padding-left: 0;
+    margin-top: 0;
+}
+
+/* 内容区域样式 */
+.student-content {
+    padding: 2rem 0;
+    max-width: 900px;
+    margin: 0 auto;
+    min-height: calc(100vh - 56px);  /* 确保内容区域有足够的高度支持滚动 */
+    overflow-y: auto;  /* 允许内容区域垂直滚动 */
+}
+
+/* 个人资料布局 */
+.student-profile {
+    display: flex;
+    gap: 3rem;
+    margin-bottom: 2rem;
+    padding: 0 15px;
+}
+
+.profile-image-container {
+    flex: 0 0 300px;
+}
+
+.profile-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.profile-info {
+    flex: 1;
+}
+
+.profile-info h2 {
+    color: #2c3e50;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    border-bottom: 2px solid black;
+    padding-bottom: 0.5rem;
+}
+
+/* 信息区块样式 */
+.info-section {
+    margin-bottom: 2rem;
+}
+
+.info-section h3 {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+}
+
+.info-section ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin-bottom: 1.5rem;
+}
+
+.info-section li {
+    font-family: 'Source Sans Pro', Arial, sans-serif;
+    font-size: 1.1em;
+    line-height: 1.8;
+    color: #3c4858;
+    margin-bottom: 0.8rem;
+}
+
+.info-section p {
+    font-family: 'Source Sans Pro', Arial, sans-serif;
+    font-size: 1.1em;
+    line-height: 1.8;
+    color: #3c4858;
+    text-align: justify;
+}
+
+.contact-info {
+    margin-top: 2rem;
+}
+
+.student-name {
+    font-size: 14px;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .student-profile {
+        flex-direction: column;
+    }
+
+    .profile-image-container {
+        max-width: 100%;
+        margin-bottom: 2rem;
+    }
+}

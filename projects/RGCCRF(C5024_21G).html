@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
+    <title>Gas-Phase Oxidation Mechanism - EASE</title>
+    <link
+      href="../css/bootstrap.min.css"
+      rel="stylesheet" />
+    <link
+      href="../css/style.css"
+      rel="stylesheet" />
+    <link
+      href="../css/projects-topic.css"
+      rel="stylesheet" />
+    <link href="../css/navbar.css" rel="stylesheet" />
+    <style>
+      /* 移除标题背景和调整样式 */
+      .projects-topic-header {
+        background: none;
+        height: auto;
+        padding: 0;
+        margin-top: 56px;
+        width: 100%;
+      }
+
+      .projects-topic-header .container {
+        max-width: 870px;
+        margin: 0 auto;
+        padding: 0;
+        text-align: left;
+      }
+
+      .projects-topic-header h1 {
+        font-family: Arial, serif;
+        font-size: 2.2em;
+        font-weight: 600;
+        color: #2c3e50;
+        margin-bottom: 10px;
+        text-align: justify;
+        margin-left: -15px;
+        display: inline-block;
+        width: 100%;
+      }
+
+      /* 调整主内容区域样式 */
+      .projects-content {
+        max-width: 870px;
+        margin: 0 auto;
+        padding: 0;
+      }
+
+      /* 确保文本两端对齐 */
+      .projects-text {
+        font-family: 'Source Sans Pro', Arial, sans-serif;
+        font-size: 1.1em;
+        line-height: 1.8;
+        color: #3c4858;
+        text-align: justify;
+        margin-bottom: 1.5rem;
+      }
+
+      /* 调整图片和文字布局 */
+      .content-with-image {
+        display: block;
+        position: relative;
+        margin: 2rem 0;
+      }
+
+      .text-content {
+        margin: 0;
+      }
+
+      .image-content {
+        float: right;
+        width: 300px;
+        margin: 0 0 20px 20px;
+      }
+
+      .content-with-image.image-left .image-content {
+        float: left;
+        margin: 0 20px 20px 0;
+      }
+
+      .projects-image {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .figure-caption {
+        text-align: center;
+        margin-top: 8px;
+        font-size: 0.9em;
+        color: #666;
+      }
+
+      /* 清除浮动 */
+      .projects-section::after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+
+      /* 修改小标题样式 */
+      .section-title {
+        font-family: Arial, serif;
+        font-size: 1.8em;
+        font-weight: 600;
+        color: #2c3e50;
+        margin-bottom: 0.9rem;
+        margin-top: 1.8rem;
+        padding-bottom: 0.5rem;
+        border-bottom: 2px solid #3498db;
+      }
+
+      /* 调整项目区域的间距 */
+      .projects-section {
+        margin-bottom: 2.4rem;
+      }
+
+      /* 修改相关出版物标题样式 */
+      .related-publications h3 {
+        font-family: Arial, serif;
+        font-size: 1.3em;
+        font-weight: 600;
+        color: #2c3e50;
+        margin-top: 1.5rem;
+        margin-bottom: 1rem;
+      }
+
+      /* 修改出版物条目样式 */
+      .publication-item {
+        font-family: 'Source Sans Pro', Arial, sans-serif;
+        font-size: 1.1em;
+        line-height: 1.8;
+        color: #3c4858;
+        margin-bottom: 1rem;
+      }
+
+      /* 修改列表样式 */
+      .projects-text ul {
+        padding-left: 1.5rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .projects-text li {
+        font-family: 'Source Sans Pro', Arial, sans-serif;
+        font-size: 1.1em;
+        line-height: 1.8;
+        color: #3c4858;
+        margin-bottom: 0.8rem;
+      }
+
+      /* 修改链接样式 */
+      a {
+        color: #1a237e;
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+
+      a:hover {
+        color: #3949ab;
+        text-decoration: underline;
+      }
+
+      /* 确保导航栏固定在顶部 */
+      .navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+      }
+
+      /* 调整body的顶部内边距 */
+      body {
+        padding-top: 56px;
+        margin-top: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Include the navigation bar -->
+    <div id="navbar-placeholder"></div>
+    <script>
+      fetch('../navbar.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('navbar-placeholder').innerHTML = data;
+          // Adjust links based on the current environment and directory
+          let basePath = '/';
+          // Remove 'students/' prefix for local development
+          if (window.location.pathname.includes('/projects/') && window.location.hostname !== '/') {
+            basePath = '../';
+          }
+          document.querySelectorAll('.navbar-nav a').forEach(link => {
+            link.href = basePath + link.getAttribute('href');
+          });
+          // Adjust brand link
+          const brandLink = document.querySelector('.navbar-brand');
+          if (brandLink) {
+            brandLink.href = basePath + 'index.html';
+          }
+        })
+        .catch(error => console.error('Error loading navbar:', error));
+    </script>
+
+    <!-- Header Banner -->
+    <header class="projects-topic-header">
+      <div class="container">
+        <h1 style="text-align: justify;">RGC/CRF (C5024-21G)
+          - Is the usual social distance sufficient to avoid airborne infection of expira
+        </h1>
+      </div>
+    </header>
+
+    <!-- Projects Content -->
+    <!-- Previous head and nav content remains the same -->
+
+    <!-- Projects Content -->
+    <main class="container projects-content">
+
+      <div class="projects-section">
+        <h2 class="section-title">Introduction</h2>
+        <div class="content-with-image image-right">
+          <div class="text-content">
+            <p class="projects-text">
+              As airborne transmission of expiratory droplets is one of the important pathways for viral respiratory diseases including the recent pandemic COVID-19 to infect healthy people, it is extremely important to explore and understand the detailed mechanisms of virus spread through airborne expiratory droplets. To reduce the risk of exposure to viral respiratory diseases, the World Health Organization recommends main measures, namely hand hygiene, social distancing, and wearing masks. Among the recommended measures, there is a hot debate about social distancing related to the exposure risk, especially in indoor environments. Through expiratory activities, airborne virus-laden droplets may spread over long distances, such as tens of meters in indoor environments, and remain in the air for a long time, making it an important route of exposure. Unfortunately, the scientific evidence on many public health policies regarding social distancing is still fragmentary. The public has only a rudimentary understanding of airborne transmission of viral respiratory diseases and proper social distancing. To address the concern of "whether the usual social distance is sufficient to avoid airborne infection of expiratory droplets in indoor environments", this project will use systematic, multidisciplinary experimental, theoretical and modelling approaches. The spatiotemporal variations of size distributions, velocity vector fields and airborne dynamics of expiratory droplets generated from people infected with Influenza A or B, and the quantities of influenza virus at different distances from the test subjects will be firstly measured using a suite of the state-of-the-art instruments and methods. Bacteriophage phi 6 will then be used as a surrogate of coronavirus and other human pathogenic enveloped viruses to investigate the survivability and number of viruses in size-resolved droplets at different time and locations from the release point under different environmental conditions (e.g. temperature and relative humidity) with the aid of cultivation method and RT-qPCR technique. Lastly, a versatile model of whole-range airborne transmission will be developed and validated with experimental data to predict the airborne transmission of virus-laden expiratory droplets and the risk of exposure to viable viruses. Different from previous models, more parameters will be integrated, especially including survivability and number of viruses in size-resolved droplets at various distances and time, and impact of droplet concentration on the drag force on droplets under different environmental conditions, into the model for more realistic simulations. The outcomes of the project will be the knowledge necessary to determine proper social distancing in various indoor environments, which will contribute to the control of respiratory infectious diseases.
+            </p>
+           
+          </div>
+          <div class="image-content">
+            <img
+              src="../images/pro1.webp"
+              alt="RO2 Reaction Mechanism"
+              class="projects-image" />
+            <p class="figure-caption">Figure source: Xu et al. 2019 JPCA</p>
+          </div>
+        </div>
+
+        <div class="related-publications">
+          <h3>Related Publications:</h3>
+          <div class="publication-item">
+            Xu, L.; Møller, K. H.; Crounse, J. D.; Otkjær, R. V.; Kjaergaard, H.
+            G.; Wennberg, P. O. Unimolecular Reactions of Peroxy Radicals Formed
+            in the Oxidation of Α-Pinene and Β-Pinene by Hydroxyl Radicals. The
+            Journal of Physical Chemistry A 2019, 123, 1661-1674 (
+            <a href="#">link</a>
+            ).
+          </div>
+        </div>
+      </div>
+
+     
+    
+    </main>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.min.js"></script>
+    <script type="module" src="/main.js"></script>
+    <script>
+
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js"></script>
+    <script src="/js/search.js"></script>
+  </body>
+</html>

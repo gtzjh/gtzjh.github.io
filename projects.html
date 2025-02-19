@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projects - EASE</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="css/projects.css" rel="stylesheet" />
+    <link href="css/navbar.css" rel="stylesheet" />
+    
+    <style>
+      /* 页面整体基础字体 */
+      body {
+        font-family: 'Source Sans Pro', 'Helvetica Neue', Arial, sans-serif;
+        line-height: 1.6;
+      }
+
+      /* 主标题样式 */
+      h1 {
+        font-family: Arial, sans-serif;
+        font-size: 2.2em;
+        font-weight: 600;
+        color: #2c3e50;
+        margin-bottom: 1.2em;
+        text-align: left;
+        margin-left: 15px;
+      }
+
+      /* 正文段落样式 */
+      p {
+        font-family: 'Source Sans Pro', Arial, sans-serif;
+        font-size: 1.1em;
+        line-height: 1.8;
+        color: #3c4858;
+      }
+
+      /* 内容区域样式 */
+      .projects-content {
+        margin-top: 40px;
+      }
+
+      /* 卡片样式 */
+      .card-title {
+        font-family: 'Georgia', 'Times New Roman', serif;
+        font-size: 1.2em;
+        color: #2c3e50;
+      }
+
+      .card-title p {
+        font-family: 'Source Sans Pro', Arial, sans-serif;
+        font-size: 0.9em;
+        color: #666;
+        margin-top: 0.5em;
+      }
+
+      /* 现有的卡片布局样式 */
+      .content-container {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+      .card-img-top {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+      }
+      .card-img-SP {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+        max-height: 200px;
+      }
+      .card {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+      }
+      .card-body {
+        flex-grow: 1;
+      }
+    </style>
+  </head>
+
+
+  <body>
+    <!-- Include the navigation bar -->
+    <div id="navbar-placeholder"></div>
+    <script>
+      fetch('navbar.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('navbar-placeholder').innerHTML = data;
+        })
+        .catch(error => console.error('Error loading navbar:', error));
+    </script>
+
+    <div class="content-container">
+      <div class="projects-content" style="margin-top: 40px;">
+        <h1>Selected Projects</h1>
+        <div class="projects-section">
+          <p>
+            By developing and applying time-chemically resolved analysis techniques and observation-based-verified models,
+            we focus our research on atmospheric chemistry of reactive organics and the secondary products, 
+            as well as the health, environmental, and climate effects of related air pollution.
+          </p>
+          <div class="spacer"></div>
+          
+          <!-- 添加 row 容器并调整列宽为 col-md-6 -->
+          <div class="row">
+
+            <div class="col-md-6 mb-4">
+              <div class="card">
+                <a href="projects/NSFC.html">
+                  <img src="images/NSFC.png" alt="Runjing Zhou" class="card-img-top" />
+                </a>
+                <div class="card-body">
+                  <h5 class="card-title">
+                    <a href="projects/NSFC.html">NSFC/Young Scientists Fund (42207111)</a>
+                    <p>華中地區高海拔背景大氣中過氧乙酰硝酸酯的化學過程及對臭氧生成的影響</p>
+                  </h5>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6 mb-4">
+              <div class="card">
+                <a href="projects/RGCGRF(15219621).html">
+                  <img src="images/RGC_GRF(15219621).png" alt="Runjing Zhou" class="card-img-SP" />
+                </a>
+                <div class="card-body">
+                  <h5 class="card-title">
+                    <a href="projects/RGCGRF(15219621).html">RGC/GRF (15219621)</a>
+                    <p>Rise in summertime ozone levels in South China: Impacts of long-range transpor</p>
+                  </h5>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6 mb-4">
+              <div class="card">
+                <a href="projects/RGCGRF(15209223).html">
+                  <img src="images/RGC_GRF(15209223).png" alt="Runjing Zhou" class="card-img-top" />
+                </a>
+                <div class="card-body">
+                  <h5 class="card-title">
+                    <a href="projects/RGCGRF(15209223).html">RGC/GRF (15209223)</a>
+                    <p>What has driven the ozone increase in Hong Kong over the past decade?</p>
+                  </h5>
+                </div>
+              </div>
+            </div>
+         
+            <div class="col-md-6 mb-4">
+              <div class="card">
+                <a href="projects/PPRFS.html">
+                  <img src="images/PPRFS.png" alt="Hongyong Li" class="card-img-top" />
+                </a>
+                <div class="card-body">
+                  <h5 class="card-title">
+                    <a href="projects/PPRFS.html">CEPU/PPRFS (2023.A2.059.23C)</a>
+                    <p>What are the implications of COVID-19 restrictions for ozone pollution</p>
+                  </h5>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6 mb-4">
+              <div class="card">
+                <a href="projects/RGCCRF(C5024_21G).html">
+                  <img src="images/RGC_CRF(C5024_21G).png" alt="Runjing Zhou" class="card-img-SP" />
+                </a>
+                <div class="card-body">
+                  <h5 class="card-title">
+                    <a href="projects/RGCCRF(C5024_21G).html">RGC/CRF (C5024-21G)</a>
+                    <p>Is the usual social distance sufficient to avoid airborne infection of expira</p>
+                  </h5>
+                </div>
+              </div>
+            </div>
+ 
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.min.js"></script>
+    <script type="module" src="/main.js"></script>
+    <script>
+
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js"></script>
+    <script src="js/search.js"></script>
+  </body>
+</html>

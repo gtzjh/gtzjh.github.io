@@ -1,0 +1,79 @@
+name: Update Search Index
+
+on:
+  schedule:
+    - cron: "0 0 * * *" # 每天UTC时间0点运行
+  push:
+    paths:
+      - '**.html'
+      - '!search.json'
+  # 添加手动触发选项，方便测试
+  workflow_dispatch:
+
+jobs:
+  generate-index:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          
+      # 创建 package.json
+      - name: Create package.json
+        run: |
+          echo '{
+            "name": "search-index-generator",
+            "version": "1.0.0",
+            "private": true,
+            "dependencies": {
+              "cheerio": "^1.0.0-rc.12",
+              "lunr": "^2.3.9"
+            }
+          }' > package.json
+          
+      - name: Install dependencies
+        run: |
+          npm install
+          # 显示安装的依赖
+          npm list --depth=0
+      
+      - name: Check if generate-search-index.js exists
+        run: |
+          ls -l scripts/
+          cat scripts/generate-search-index.js
+      
+      - name: Generate Search Index
+        run: |
+          node scripts/generate-search-index.js || {
+            echo "Error generating search index"
+            exit 1
+          }
+          echo "Generated search.json:"
+          ls -l search.json
+          head -c 500 search.json
+        
+      - name: Commit changes
+        run: |
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
+          
+          # Stage the changes first
+          git add search.json
+          
+          # Only proceed with commit and push if there are changes
+          if ! git diff-index --quiet HEAD --; then
+            # Now pull with rebase
+            git pull origin main --rebase
+            
+            git commit -m "Auto-update search index [skip ci]"
+            git push origin HEAD:main
+          else
+            echo "No changes to commit"
+          fi 

@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>People - EASE</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="css/people.css" rel="stylesheet" />
+    <link href="css/navbar.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- Include the navigation bar -->
+    <div id="navbar-placeholder"></div>
+    <script>
+      fetch('navbar.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('navbar-placeholder').innerHTML = data;
+        })
+        .catch(error => console.error('Error loading navbar:', error));
+    </script>
+
+    
+    <!-- Main Content -->
+    <main class="people-content">
+      <style>
+        /* 页面整体基础字体 */
+        body {
+          font-family: 'Source Sans Pro', 'Helvetica Neue', Arial, sans-serif;
+          line-height: 1.6;
+        }
+
+        /* 主标题样式 */
+        .section-title {
+          font-family: Arial, sans-serif;
+          font-size: 2.2em;
+          font-weight: 600;
+          color: #2c3e50;
+          margin-bottom: 1.2em;
+          text-align: left;
+          margin-left: 15px;  /* 添加左边距，与内容对齐 */
+        }
+
+        /* PI 姓名样式 */
+        h3 {
+          font-family: 'Playfair Display', Arial, serif;
+          font-size: 2em;
+          font-weight: 700;
+          color: #34495e;
+          margin-bottom: 0.8em;
+        }
+
+        /* 子标题样式（Education, Contact等） */
+        h4 {
+          font-family:  Arial, serif;
+          font-size: 1.3em;
+          font-weight: 600;
+          color: #2c3e50;
+          margin-top: 1em;
+        }
+
+        /* 教育经历列表样式 */
+        .education ul {
+          font-family: 'Source Sans Pro', Arial, sans-serif;
+          font-size: 1.1em;
+          color: #34495e;
+        }
+
+        /* 联系方式样式 */
+        .contact p {
+          font-family: 'Source Sans Pro', Arial, sans-serif;
+          font-size: 1.1em;
+          color: #34495e;
+        }
+
+        /* 个人简介段落样式 */
+        p[style="text-align: justify;"] {
+          font-family: 'Source Sans Pro', Arial, sans-serif;
+          font-size: 1.1em;
+          line-height: 1.8;
+          color: #2c3e50;
+        }
+
+        /* 团队成员卡片样式 */
+        .card-title {
+          font-family: 'Georgia', 'Times New Roman', serif;
+          font-size: 1.2em;
+          color: #2c3e50;
+          text-align: center;
+        }
+
+        .card-title p {
+          font-family: 'Source Sans Pro', Arial, sans-serif;
+          font-size: 0.9em;
+          color: #666;
+          margin-top: 0.5em;
+          text-align: center;
+        }
+
+        /* 链接样式 */
+        .links a {
+          font-family: 'Source Sans Pro', Arial, sans-serif;
+          font-weight: 600;
+        }
+
+        /* 期刊名称斜体样式 */
+        .journal-name {
+          font-style: italic;
+        }
+
+        .member-image {
+          width: 260px; /* 设置固定宽度 */
+          height: 260px; /* 设置固定高度 */
+          object-fit: cover; /* 保持图片比例并覆盖 */
+        }
+        .containe {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+      </style>
+
+      <!-- Principal Investigator Section -->
+      <section id="pi" class="mb-5">
+        <h2 class="section-title">Principal Investigator</h2>
+        <div class="row">
+          <div class="col-md-4">
+            <img
+              src="images/1234.jpg"
+              alt="Lu Xu"
+              class="img-fluid rounded profile-image"
+              style="margin-top: 10px;" /* 添加上边距，与名字对齐 */
+            />
+          </div>
+          <div class="col-md-8">
+            <div class="education">
+              <h3 style="margin-top: 0;">Xiaopu LYU</h3>
+              <h4>Education</h4>
+              <ul>
+                <li>
+                  Ph.D. Environmental Engineering, The Hong Kong Polytechnic
+                  University, 2018
+                </li>
+                <li>
+                  MPhil. Environmental Engineering, Wuhan University, 2014
+                </li>
+                <li>
+                  B.E. Chemical Engineering, Zhejiang University of Technology,
+                  2012
+                </li>
+              </ul>
+            </div>
+            <div class="contact">
+              <h4>Contact</h4>
+              <p>xiaopu_lyu@hkbu.edu.hk</p>
+            </div>
+            <div class="links">
+              <a
+                href="CV/CV_Dr. Xiaopu LYU.pdf"
+                target="_blank"
+                class="btn btn-outline-primary me-2"
+              >
+                CV 
+              </a>
+              <a
+                class="btn btn-outline-primary"
+                <a href="https://scholar.google.com.hk/citations?user=porzF74AAAAJ&hl=en&oi=sra" 
+                class="underline" target="_blank">Google Scholar</a>
+              </a>
+            </div>
+          </div>
+
+          <div class="spacer"></div>
+          <style>
+          .spacer {
+            height: 20px; /* Adjust height as needed */
+          }
+          </style>
+          
+          <p style="text-align: justify;">Dr. Lyu held various positions at the Hong Kong Polytechnic University from September 2017 to January 2023, including Research Assistant, Postdoctoral Fellow, Research Fellow, and Assistant Professor, before joining Hong Kong Baptist University. His career has focused on air quality research, specifically investigating atmospheric reactive organic species and secondary air pollution. To date, Dr. Lyu has published over 70 scientific papers in internationally renowned journals such as <span class="journal-name">One Earth</span>, <span class="journal-name">Environmental Science & Technology</span>, and <span class="journal-name">Journal of Geophysical Research: Atmospheres</span>. His research has garnered over 3100 citations, with an h-index of 30. He has successfully led numerous competitive research grants, including 2 RGC/GRFs, 1 RGC/CRF (co-host), 1 PPR, and 1 NSFC/Youth Science Fund. Dr. Lyu actively contributes to the scientific community as a Young Editor for <span class="journal-name">The Innovation</span>, a member of the Editorial Board for <span class="journal-name">Frontiers in Sustainable Cities</span>, and a member of the Australia-China Air Quality Science and Management Centre.</p>
+        </div>
+      </section>
+
+      <!-- Students Section -->
+      <section id="graduate" class="mb-5">
+        <h2 class="section-title">Team Members</h2>
+        <div class="row">
+
+          <div class="col-md-4 mb-4">
+            <div class="card">
+              <a href="students/hong-yong-li-1.html">
+                <img src="images/LHY.jpg" alt="Hongyong Li" class="card-img-top" />
+              </a>
+              <div class="card-body">
+                <h5 class="card-title">
+                  <a href="students/hong-yong-li-1.html">Hongyong Li</a>
+                  <p>Exchange PhD Student</p>
+                </h5>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-md-4 mb-4">
+            <div class="card">
+              <a href="students/run-jing-zhou-1.html">
+                <img src="images/ZRJ.webp" alt="Runjing Zhou" class="card-img-top" />
+              </a>
+              <div class="card-body">
+                <h5 class="card-title">
+                  <a href="students/run-jing-zhou-1.html">Runjing Zhou</a>
+                  <p>PhD Student</p>
+                </h5>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-md-4 mb-4">
+            <div class="card">
+              <a href="students/feng-yang-zhang-1.html">
+                <img src="images/ZFY.webp" alt="Fengyang Zhang" class="card-img-top" />
+              </a>
+              <div class="card-body">
+                <h5 class="card-title">
+                  <a href="students/feng-yang-zhang-1.html">Fengyang Zhang</a>
+                  <p>PhD Student</p>
+                </h5>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-md-4 mb-4">
+            <div class="card">
+              <a href="students/hai-bin-huang-1.html">
+                <img src="images/HHB.webp" alt="Haibin Huang" class="card-img-top" />
+              </a>
+              <div class="card-body">
+                <h5 class="card-title">
+                  <a href="students/hai-bin-huang-1.html">Haibin Huang</a>
+                  <p>PhD Student</p>
+                </h5>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-md-4 mb-4">
+            <div class="card">
+              <a href="students/mai-qi-sun-1.html">
+                <img src="images/SMQ.jpg" alt="Maiqi Sun" class="card-img-top" />
+              </a>
+              <div class="card-body">
+                <h5 class="card-title">
+                  <a href="students/mai-qi-sun-1.html">Maiqi Sun</a>
+                  <p>PhD Student</p>
+                </h5>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-md-4 mb-4">
+            <div class="card">
+              <a href="students/lin-yao-1.html">
+                <img src="images/YL.jpg" alt="Lin Yao" class="card-img-top" />
+              </a>
+              <div class="card-body">
+                <h5 class="card-title">
+                  <a href="students/lin-yao-1.html">Lin Yao</a>
+                  <p>PhD Student</p>
+                </h5>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-md-4 mb-4">
+            <div class="card">
+              <a href="students/yu-chen-zhang.html">
+                <img src="images/ZYC.jpg" alt="Yuchen Zhang" class="card-img-top" />
+              </a>
+              <div class="card-body">
+                <h5 class="card-title">
+                  <a href="students/yu-chen-zhang.html">Yuchen Zhang</a>
+                  <p>Research Assistant</p>
+                </h5>
+              </div>
+            </div>
+          </div>          
+
+        </div>
+      </section>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.min.js"></script>
+    <script type="module" src="/main.js"></script>
+    <script>
+
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js"></script>
+    <script src="js/search.js"></script>
+  </body>
+</html>

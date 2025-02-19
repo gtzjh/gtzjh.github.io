@@ -1,0 +1,87 @@
+.navbar-brand {
+  font-weight: bold;
+  color: #666;
+  margin-left: 10em !important;  /* 确保EASE的缩进 */
+}
+
+.nav-item.dropdown .nav-link.dropdown-toggle {
+  /* 移除之前的color: #000000 设置 */
+}
+
+.nav-item.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background-color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  margin-top: 0;
+}
+
+.dropdown-item {
+  padding: 10px 20px;
+  color: #666 !important;  /* 统一下拉菜单项的颜色 */
+  text-decoration: none;
+}
+
+.dropdown-item:hover {
+  background-color: #f0f0f0;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Ensure the navbar is above other content */
+}
+
+body {
+    padding-top: 56px; /* Adjust this value to match the height of your navbar */
+}
+
+/* 统一导航链接颜色 */
+.nav-link,
+.nav-item.dropdown .nav-link.dropdown-toggle {
+    color: #666 !important;  /* 统一所有导航项的颜色 */
+    transition: color 0.3s ease;
+}
+
+/* 当前页面或其子页面对应的导航项加粗 */
+.nav-link.active,
+.nav-link[href="people.html"].active ~ .dropdown-menu .dropdown-item.active,
+.nav-link[href="projects.html"].active ~ .dropdown-menu .dropdown-item.active {
+    color: #1a237e !important;  /* 高亮颜色 */
+    font-weight: bold !important;
+}
+
+/* 保持其他导航项的正常字重 */
+.nav-link:not(.active) {
+    font-weight: normal;
+}
+
+/* 鼠标悬停效果 */
+.nav-link:hover {
+    color: #1a237e !important;
+}
+
+/* 下拉菜单中的链接颜色 */
+.dropdown-item:hover,
+.dropdown-item.active {
+    color: #1a237e;
+    background-color: #f8f9fa;
+}
+
+/* 移除导航链接的下划线效果 */
+.nav-link:hover,
+.navbar-brand:hover,
+.dropdown-item:hover {
+    text-decoration: none !important;
+}
+
+/* 确保下拉菜单项也不显示下划线 */
+.dropdown-item {
+    text-decoration: none !important;
+}

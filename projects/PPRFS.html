@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
+    <title>Gas-Phase Oxidation Mechanism - EASE</title>
+    <link
+      href="../css/bootstrap.min.css"
+      rel="stylesheet" />
+    <link
+      href="../css/style.css"
+      rel="stylesheet" />
+    <link
+      href="../css/projects-topic.css"
+      rel="stylesheet" />
+    <link href="../css/navbar.css" rel="stylesheet" />
+    <style>
+      /* 移除标题背景和调整样式 */
+      .projects-topic-header {
+        background: none;
+        height: auto;
+        padding: 0;
+        margin-top: 56px;
+        width: 100%;
+      }
+
+      .projects-topic-header .container {
+        max-width: 870px;
+        margin: 0 auto;
+        padding: 0;
+        text-align: left;
+      }
+
+      .projects-topic-header h1 {
+        font-family: Arial, serif;
+        font-size: 2.2em;
+        font-weight: 600;
+        color: #2c3e50;
+        margin-bottom: 10px;
+        text-align: justify;
+        margin-left: -15px;
+        display: inline-block;
+        width: 100%;
+      }
+
+      /* 调整主内容区域样式 */
+      .projects-content {
+        max-width: 870px;
+        margin: 0 auto;
+        padding: 0;
+      }
+
+      /* 确保文本两端对齐 */
+      .projects-text {
+        font-family: 'Source Sans Pro', Arial, sans-serif;
+        font-size: 1.1em;
+        line-height: 1.8;
+        color: #3c4858;
+        text-align: justify;
+        margin-bottom: 1.5rem;
+      }
+
+      /* 调整图片和文字布局 */
+      .content-with-image {
+        display: block;
+        position: relative;
+        margin: 2rem 0;
+      }
+
+      .text-content {
+        margin: 0;
+      }
+
+      .image-content {
+        float: right;
+        width: 300px;
+        margin: 0 0 20px 20px;
+      }
+
+      .content-with-image.image-left .image-content {
+        float: left;
+        margin: 0 20px 20px 0;
+      }
+
+      .projects-image {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .figure-caption {
+        text-align: center;
+        margin-top: 8px;
+        font-size: 0.9em;
+        color: #666;
+      }
+
+      /* 清除浮动 */
+      .projects-section::after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+
+      /* 修改小标题样式 */
+      .section-title {
+        font-family: Arial, serif;
+        font-size: 1.8em;
+        font-weight: 600;
+        color: #2c3e50;
+        margin-bottom: 0.9rem;
+        margin-top: 1.8rem;
+        padding-bottom: 0.5rem;
+        border-bottom: 2px solid #3498db;
+      }
+
+      /* 调整项目区域的间距 */
+      .projects-section {
+        margin-bottom: 2.4rem;
+      }
+
+      /* 修改相关出版物标题样式 */
+      .related-publications h3 {
+        font-family: Arial, serif;
+        font-size: 1.3em;
+        font-weight: 600;
+        color: #2c3e50;
+        margin-top: 1.5rem;
+        margin-bottom: 1rem;
+      }
+
+      /* 修改出版物条目样式 */
+      .publication-item {
+        font-family: 'Source Sans Pro', Arial, sans-serif;
+        font-size: 1.1em;
+        line-height: 1.8;
+        color: #3c4858;
+        margin-bottom: 1rem;
+      }
+
+      /* 修改列表样式 */
+      .projects-text ul {
+        padding-left: 1.5rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .projects-text li {
+        font-family: 'Source Sans Pro', Arial, sans-serif;
+        font-size: 1.1em;
+        line-height: 1.8;
+        color: #3c4858;
+        margin-bottom: 0.8rem;
+      }
+
+      /* 修改链接样式 */
+      a {
+        color: #1a237e;
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+
+      a:hover {
+        color: #3949ab;
+        text-decoration: underline;
+      }
+
+      /* 确保导航栏固定在顶部 */
+      .navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+      }
+
+      /* 调整body的顶部内边距 */
+      body {
+        padding-top: 56px;
+        margin-top: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Include the navigation bar -->
+    <div id="navbar-placeholder"></div>
+    <script>
+      fetch('../navbar.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('navbar-placeholder').innerHTML = data;
+          // Adjust links based on the current environment and directory
+          let basePath = '/';
+          // Remove 'students/' prefix for local development
+          if (window.location.pathname.includes('/projects/') && window.location.hostname !== '/') {
+            basePath = '../';
+          }
+          document.querySelectorAll('.navbar-nav a').forEach(link => {
+            link.href = basePath + link.getAttribute('href');
+          });
+          // Adjust brand link
+          const brandLink = document.querySelector('.navbar-brand');
+          if (brandLink) {
+            brandLink.href = basePath + 'index.html';
+          }
+        })
+        .catch(error => console.error('Error loading navbar:', error));
+    </script>
+
+    <!-- Header Banner -->
+    <header class="projects-topic-header">
+      <div class="container">
+        <h1 style="text-align: justify;">CEPU/PPRFS (2023.A2.059.23C)
+          - What are the implications of COVID-19 restrictions for ozone pollution
+        </h1>
+      </div>
+    </header>
+
+    <!-- Projects Content -->
+    <!-- Previous head and nav content remains the same -->
+
+    <!-- Projects Content -->
+    <main class="container projects-content">
+
+      <div class="projects-section">
+        <h2 class="section-title">Introduction</h2>
+        <div class="content-with-image image-right">
+          <div class="text-content">
+            <p class="projects-text">
+              Regional photochemical smog characterized by continuously rising levels of surface ozone (O3) has long been an air quality problem in Hong Kong (HK). Numerous studies attempted to address the combined effects of local chemistry and transboundary transport on O3 pollution in HK. However, a wide range of regional contributions were determined depending on many factors, such as weather patterns, and the estimates were based on assumed emission scenarios of air pollutants. The COVID-19 restrictions, especially the strict lockdowns in mainland China, provide us with a rare opportunity to examine the air quality impacts of human activities. While related work has been extensively carried out, the effects of mainland's lockdown on O3 formation regime and sensitivity in HK remain to be unraveled. In addition, HK imposed flexible restrictions to ease the epidemic. It is unknown how the measures were different from the strict lockdown in affecting O3 pollution. Further, derived from the air quality impacts of COVID-19 restrictions is a deeper question: Will persistent O3 attainment be achieved even if all local emissions of anthropogenic air pollutants are eliminated? The answer lies in the level of regional background O3. Moreover, O3 pollution in HK is very sensitive to weather. O3 control by reducing anthropogenic emissions must be designed for extreme weather conditions, which however has not been fully understood. In this project, we will i) reveal the changes in O3 and its precursors in HK during the pandemic; ii) compare the impacts of different levels of COVID-19 restriction on O3 pollution, photochemistry, and transboundary transport; iii) determine the regional background O3 and its variations over time; and iv) explore effective solutions to exacerbated O3 pollution under extreme weather conditions. Observations available in air quality monitoring networks will be used to train the explainable machine learning and to constrain and verify model simulations. We will work around the COVID-19 restrictions, i.e., a series of large-scale control experiments, and simulate for extended scenarios. The new knowledge generated from this project will be backed by real data and easily translated into O3 pollution control policies. We expect the findings will support coordinated control of photochemical smog in the Greater Bay Area (GBA), through providing insights on mainland-HK differential control strategies, significance of non-combustion sources, and special intervention for anthropogenic emissions under weather extremes.
+            </p>
+
+            <p class="projects-text">
+              以持續升高的近地面臭氧為特徵的區域光化學污染是香港的一個長期空氣質素問題。COVID-19限制措施為研究人類活動對空氣質素的影響提供了難得的機會，而內地和香港的舉措對空氣污染物的跨境輸送，本地排放和臭氧化學的影響尚未被闡明。由此更衍生出一個深層次問題：即便消除所有人為空氣污染物的本地排放，持續的臭氧達標能否實現？答案在於區域背景臭氧的濃度水平。此外，香港臭氧污染對天氣非常敏感。必須針對極端天氣條件設計適應性的臭氧控制策略，而相關認識尚不充分。在該項目中，我們將揭示疫情期間香港臭氧及其前體物的變化；對比內地和香港限制措施對臭氧污染的不同影響；確定香港城市背景臭氧水平及其隨時間的變化；並探索針對極端天氣加劇臭氧污染的有效應對方案。分析將基於COVID-19限制這一系列的大型控制試驗和延伸情景。因此，項目產生的新知識將以實際數據作為支撐，且易於轉化為臭氧污染控制政策。我們預期研究結果將助力大灣區光化學煙霧污染的協同控制。
+            </p>
+
+           
+          </div>
+          <div class="image-content">
+            <img
+              src="../images/pro1.webp"
+              alt="RO2 Reaction Mechanism"
+              class="projects-image" />
+            <p class="figure-caption">Figure source: Xu et al. 2019 JPCA</p>
+          </div>
+        </div>
+
+        <div class="related-publications">
+          <h3>Related Publications:</h3>
+          <div class="publication-item">
+            Xu, L.; Møller, K. H.; Crounse, J. D.; Otkjær, R. V.; Kjaergaard, H.
+            G.; Wennberg, P. O. Unimolecular Reactions of Peroxy Radicals Formed
+            in the Oxidation of Α-Pinene and Β-Pinene by Hydroxyl Radicals. The
+            Journal of Physical Chemistry A 2019, 123, 1661-1674 (
+            <a href="#">link</a>
+            ).
+          </div>
+        </div>
+      </div>
+
+     
+    
+    </main>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.min.js"></script>
+    <script type="module" src="/main.js"></script>
+    <script>
+
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js"></script>
+    <script src="/js/search.js"></script>
+  </body>
+</html>

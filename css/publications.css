@@ -1,0 +1,122 @@
+/* Publications Page Styles */
+.publications-header {
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../images/bj简约.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 56px;
+}
+
+.publications-header h1 {
+    color: white;
+    font-size: 4rem;
+    text-align: center;
+}
+
+.publications-content {
+    padding: 2rem 0;
+    margin: 0 auto;
+    max-width: 900px;
+    text-align: left;
+}
+
+/* 添加标题样式 */
+.publications-content h1 {
+    color: #2c3e50;
+    font-size: 2.2em;
+    margin-top: 1.2rem;
+    margin-bottom: 1.5rem;
+    margin-left: 0em;
+    text-align: left;
+    border-bottom: 2px solid #002366;
+    padding-bottom: 0.5rem;
+}
+
+.publication-section {
+    margin-bottom: 1.5rem;
+}
+
+.section-title {
+    color: #2c3e50;
+    border-bottom: 2px solid #002366;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.publication-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.publication-item {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #eee;
+}
+
+.publication-item:last-child {
+    border-bottom: none;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .publications-header {
+        height: 200px;
+    }
+
+    .publications-header h1 {
+        font-size: 3rem;
+    }
+}
+.publication-item img {
+    height: auto;
+    width: 400px;
+    float: left;
+    margin-right: 20px;
+}
+
+.publication-description {
+    overflow: hidden;
+}
+
+/* 清除浮动 */
+.publication-item::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .publication-item img {
+        display: block;
+        margin: 0 auto 20px auto;
+        float: none;
+    }
+
+    .publication-description {
+        text-align: center;
+    }
+}
+
+.publication-description h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #2c3e50;
+    line-height: 1.4;
+}
+
+.publication-description p {
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+    color: #666;
+    line-height: 1.5;
+}
+
+.publication-description p i {
+    color: #2c3e50;
+    font-weight: 500;
+}

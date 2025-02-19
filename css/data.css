@@ -1,0 +1,103 @@
+/* Opportunities Page Styles */
+.data-header {
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+    background-size: cover;
+    background-position: center;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 56px;
+}
+
+.data-header h1 {
+    color: white;
+    font-size: 4rem;
+    text-align: center;
+}
+
+.data-section {
+    margin-top: 1rem;
+    margin-bottom: 2.5rem;
+}
+
+.data-section h2 {
+    color: #2c3e50;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 0.5rem;
+}
+
+.data-section p {
+    color: #444;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+}
+
+.contact-info {
+    background-color: #f8f9fa;
+    padding: 2rem;
+    border-radius: 8px;
+    margin-top: 2rem;
+}
+
+.contact-info h3 {
+    color: #2c3e50;
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+}
+
+.current-openings {
+    margin-top: 3rem;
+}
+
+.current-openings ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.current-openings li {
+    margin-bottom: 1rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.current-openings li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #3498db;
+}
+
+.data-content {
+    padding: 2rem 0;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.data-content h1 {
+    color: #2c3e50;
+    font-size: 2rem;
+    margin-top: 1.2rem;
+    margin-bottom: 1.5rem;
+    margin-left: 0em;
+    text-align: left;
+    border-bottom: 2px solid #002366;
+    padding-bottom: 0.5rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .data-header {
+        height: 200px;
+    }
+
+    .data-header h1 {
+        font-size: 3rem;
+    }
+
+    .data-content {
+        padding: 2rem 1rem;
+    }
+}

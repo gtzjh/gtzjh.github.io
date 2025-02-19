@@ -1,0 +1,130 @@
+/* newstopic Profile Page Styles */
+.newstopic-header {
+    background: none;
+    background-size: cover;
+    background-position: center;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 56px;
+    max-width: 930px;
+    margin: 0 auto;
+}
+
+.newstopic-header h1 {
+    color: #333;
+    text-align: left;
+    padding-left: 0px;
+    font-size: 2rem;
+    margin-left: 0px;
+    margin-top: 3rem;
+}
+
+.newstopic-content {
+    padding: 4rem 0;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.newstopic-profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+    margin-bottom: 3rem;
+}
+
+.newstopic-image-container {
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.profile-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.profile-info {
+    text-align: left;
+    width: 100%;
+}
+
+.profile-info h2 {
+    color: #2c3e50;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    border-bottom: 2px solid black;
+    padding-bottom: 0.5rem;
+}
+
+.info-section {
+    margin-bottom: 2rem;
+    text-align: left;
+}
+
+.info-section h3 {
+    color: #2c3e50;
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+}
+
+.info-section ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.info-section li {
+    margin-bottom: 0.8rem;
+    line-height: 1.6;
+}
+
+.info-section p {
+    line-height: 1.8;
+    color: #444;
+}
+
+.contact-info {
+    margin-top: 2rem;
+}
+
+/* Use a more specific selector to ensure the 'people' link is black */
+.navbar .navbar-nav .nav-link[href*="people"] {
+    color: black !important;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+    .newstopic-profile {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .newstopic-image-container {
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .newstopic-header {
+        height: 200px;
+    }
+
+    .newstopic-header h1 {
+        font-size: 2rem;
+    }
+
+    .newstopic-content {
+        padding: 2rem 1rem;
+    }
+}
+
+/* Add this rule to adjust the font size of h2 elements in the welcome-section */
+.welcome-section h2 {
+    font-size: 1.5rem;
+    margin-top: 0.5rem;
+}

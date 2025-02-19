@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>News - EASE</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="css/news.css" rel="stylesheet" />
+    <link href="css/navbar.css" rel="stylesheet" />
+    <style>
+      /* 页面整体基础字体 */
+      body {
+        font-family: 'Source Sans Pro', 'Helvetica Neue', Arial, sans-serif;
+        line-height: 1.6;
+        min-height: 100vh;  /* 确保body至少有一个视口高度 */
+      }
+
+      /* 主标题样式 */
+      h1 {
+        font-family: Arial, sans-serif;
+        font-size: 2.2em;
+        font-weight: 600;
+        color: #2c3e50;
+        margin-bottom: 0.3em;
+        text-align: left;
+        margin-left: 15px;
+        margin-top: 0;
+      }
+
+      /* 正文段落样式 */
+      p {
+        font-family: 'Source Sans Pro', Arial, sans-serif;
+        font-size: 1.1em;
+        line-height: 1.8;
+        color: #3c4858;
+      }
+
+      /* 内容区域样式 */
+      .news2-content {
+        margin-top: 24px;  /* 40px 的 60% = 24px */
+        padding-top: 0;
+        min-height: calc(100vh - 100px);  /* 确保内容区域有足够的高度支持滚动 */
+      }
+
+      /* 新闻项目样式 */
+      .news-item {
+        margin: 0.5em 0;
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        padding-right: 15px;  /* 给最右侧加一点内边距 */
+      }
+
+      /* 日期样式 */
+      .date {
+        font-family: 'Georgia', 'Times New Roman', serif;
+        color: #666;
+        font-size: 1em;
+        margin-left: 20px;  /* 给日期左边加点间距 */
+        min-width: 100px;   /* 给日期一个固定的最小宽度 */
+        text-align: right;  /* 日期右对齐 */
+      }
+
+      /* 新闻文本样式 */
+      .news-text {
+        font-family: 'Source Sans Pro', Arial, sans-serif;
+        color: #2c3e50;
+        position: relative;
+        padding-left: 15px;  /* 为点留出空间 */
+      }
+
+      .news-text::before {
+        content: "•";  /* 添加点 */
+        position: absolute;
+        left: 0;
+        color: #2c3e50;  /* 点的颜色与文字一致 */
+      }
+
+      /* 链接样式 */
+      .news-item a {
+        color: #2c3e50;
+        text-decoration: none;
+        flex-grow: 1;  /* 让链接占据剩余空间 */
+      }
+
+      .news-item a:hover .news-text {
+        color: #1a237e;
+      }
+
+      hr {
+        margin: 0.5em 0;
+        border-color: #eee;
+      }
+    </style>
+  </head>
+  <body style="margin-top: 20px;">
+    <!-- Include the navigation bar -->
+    <div id="navbar-placeholder"></div>
+    <script>
+      fetch('navbar.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('navbar-placeholder').innerHTML = data;
+        })
+        .catch(error => console.error('Error loading navbar:', error));
+    </script>
+
+    <!-- News Content -->
+    <main class="container news2-content">
+      <div class="news2-section">
+        <h1>News</h1>
+        
+        <div class="news-item">
+          <a href='../news/news8.html'>
+            <span class="news-text">Harbin Engineering University Welcomes Dr. Qin Chao as New Associate Professor</span>
+          </a>
+          <span class="date">28/08/2024</span>
+        </div>
+        <hr>
+        <div class="news-item">
+          <a href='../news/news7.html'>
+            <span class="news-text">Dr. Lyu awarded Faculty Performance Award</span>
+          </a>
+          <span class="date">28/08/2024</span>
+        </div>
+        <hr>
+        <div class="news-item">
+          <a href='../news/news6.html'>
+            <span class="news-text">Dr. Lyu receives PPR fund</span>
+          </a>
+          <span class="date">01/06/2024</span>
+        </div>
+        <hr>
+        <div class="news-item">
+          <a href='../news/news5.html'>
+            <span class="news-text">LOPAP training held at HKBU</span>
+          </a>
+          <span class="date">22/12/2023</span>
+        </div>
+        <hr>
+        <div class="news-item">
+          <a href='../news/news4.html'>
+            <span class="news-text">A perspective article published in One Earth</span>
+          </a>
+          <span class="date">29/08/2023</span>
+        </div>
+        <hr>
+        <div class="news-item">
+          <a href='../news/news3.html'>
+            <span class="news-text">Kick-off meeting of EPD-funded project at HKBU</span>
+          </a>
+          <span class="date">18/08/2023</span>
+        </div>
+        <hr>
+        <div class="news-item">
+          <a href='../news/news2.html'>
+            <span class="news-text">A consultancy project funded by EPD</span>
+          </a>
+          <span class="date">11/07/2023</span>
+        </div>
+        <hr>
+        <div class="news-item">
+          <a href='../news/news1_v.html'>
+            <span class="news-text">Dr. Lyu receives RGC funding</span>
+          </a>
+          <span class="date">30/06/2023</span>
+        </div>
+        <hr>
+      </div>
+    </main>
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+    <script type="module" src="/main.js"></script>
+    <script>
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js"></script>
+    <script src="js/search.js"></script>
+</body>
+</html>

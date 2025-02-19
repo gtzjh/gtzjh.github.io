@@ -1,0 +1,87 @@
+/* Projects Page Styles */
+.projects-header {
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 56px; /* Changed from margin-top to padding-top */
+    width: 100%;
+    position: relative; /* Added position relative */
+    z-index: 1; /* Added z-index */
+}
+
+.projects-header h1 {
+    color: white;
+    text-align: center;
+    font-size: 2rem;
+    margin: 0;
+    padding: 1rem;
+    max-width: 900px;
+    position: relative;
+    z-index: 2;
+    border-bottom: 1px solid #002366;
+}
+
+.projects-content {
+    padding: 2rem 0;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.projects-content h1 {
+    color: #2c3e50;
+    font-size: 2rem;
+    margin-top: 1.2rem;
+    margin-bottom: 1.5rem;
+    margin-left: 0em;
+    text-align: left;
+    border-bottom: 2px solid #002366;
+    padding-bottom: 0.5rem;
+}
+
+.projects-grid {
+    padding: 2rem 0;
+}
+
+.projects-card {
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.projects-image {
+    width: auto;
+    height: auto;
+    max-width: 400px;
+    max-height: none;
+    float: left;
+    margin-right: 20px;
+}
+
+.projects-image:hover {
+    transform: scale(1.05);
+}
+
+.projects-title {
+    color: #2c3e50;
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    text-decoration: none;
+}
+
+.projects-title:hover {
+    color: #3498db;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .projects-header {
+        height: 200px;
+    }
+
+    .projects-header h1 {
+        font-size: 3rem;
+    }
+}

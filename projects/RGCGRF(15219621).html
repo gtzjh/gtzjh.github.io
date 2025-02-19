@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
+    <title>Gas-Phase Oxidation Mechanism - EASE</title>
+    <link
+      href="../css/bootstrap.min.css"
+      rel="stylesheet" />
+    <link
+      href="../css/style.css"
+      rel="stylesheet" />
+    <link
+      href="../css/projects-topic.css"
+      rel="stylesheet" />
+    <link href="../css/navbar.css" rel="stylesheet" />
+    <style>
+      /* 移除标题背景和调整样式 */
+      .projects-topic-header {
+        background: none;
+        height: auto;
+        padding: 0;
+        margin-top: 56px;
+        width: 100%;
+      }
+
+      .projects-topic-header .container {
+        max-width: 870px;
+        margin: 0 auto;
+        padding: 0;
+        text-align: left;
+      }
+
+      .projects-topic-header h1 {
+        font-family: Arial, serif;
+        font-size: 2.2em;
+        font-weight: 600;
+        color: #2c3e50;
+        margin-bottom: 10px;
+        text-align: justify;
+        margin-left: -15px;
+        display: inline-block;
+        width: 100%;
+      }
+
+      /* 调整主内容区域样式 */
+      .projects-content {
+        max-width: 870px;
+        margin: 0 auto;
+        padding: 0;
+      }
+
+      /* 确保文本两端对齐 */
+      .projects-text {
+        font-family: 'Source Sans Pro', Arial, sans-serif;
+        font-size: 1.1em;
+        line-height: 1.8;
+        color: #3c4858;
+        text-align: justify;
+        margin-bottom: 1.5rem;
+      }
+
+      /* 调整图片和文字布局 */
+      .content-with-image {
+        display: block;
+        position: relative;
+        margin: 2rem 0;
+      }
+
+      .text-content {
+        margin: 0;
+      }
+
+      .image-content {
+        float: right;
+        width: 300px;
+        margin: 0 0 20px 20px;
+      }
+
+      .content-with-image.image-left .image-content {
+        float: left;
+        margin: 0 20px 20px 0;
+      }
+
+      .projects-image {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .figure-caption {
+        text-align: center;
+        margin-top: 8px;
+        font-size: 0.9em;
+        color: #666;
+      }
+
+      /* 清除浮动 */
+      .projects-section::after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+
+      /* 修改小标题样式 */
+      .section-title {
+        font-family: Arial, serif;
+        font-size: 1.8em;
+        font-weight: 600;
+        color: #2c3e50;
+        margin-bottom: 0.9rem;
+        margin-top: 1.8rem;
+        padding-bottom: 0.5rem;
+        border-bottom: 2px solid #3498db;
+      }
+
+      /* 调整项目区域的间距 */
+      .projects-section {
+        margin-bottom: 2.4rem;
+      }
+
+      /* 修改相关出版物标题样式 */
+      .related-publications h3 {
+        font-family: Arial, serif;
+        font-size: 1.3em;
+        font-weight: 600;
+        color: #2c3e50;
+        margin-top: 1.5rem;
+        margin-bottom: 1rem;
+      }
+
+      /* 修改出版物条目样式 */
+      .publication-item {
+        font-family: 'Source Sans Pro', Arial, sans-serif;
+        font-size: 1.1em;
+        line-height: 1.8;
+        color: #3c4858;
+        margin-bottom: 1rem;
+      }
+
+      /* 修改列表样式 */
+      .projects-text ul {
+        padding-left: 1.5rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .projects-text li {
+        font-family: 'Source Sans Pro', Arial, sans-serif;
+        font-size: 1.1em;
+        line-height: 1.8;
+        color: #3c4858;
+        margin-bottom: 0.8rem;
+      }
+
+      /* 修改链接样式 */
+      a {
+        color: #1a237e;
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+
+      a:hover {
+        color: #3949ab;
+        text-decoration: underline;
+      }
+
+      /* 确保导航栏固定在顶部 */
+      .navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+      }
+
+      /* 调整body的顶部内边距 */
+      body {
+        padding-top: 56px;
+        margin-top: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Include the navigation bar -->
+    <div id="navbar-placeholder"></div>
+    <script>
+      fetch('../navbar.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('navbar-placeholder').innerHTML = data;
+          // Adjust links based on the current environment and directory
+          let basePath = '/';
+          // Remove 'students/' prefix for local development
+          if (window.location.pathname.includes('/projects/') && window.location.hostname !== '/') {
+            basePath = '../';
+          }
+          document.querySelectorAll('.navbar-nav a').forEach(link => {
+            link.href = basePath + link.getAttribute('href');
+          });
+          // Adjust brand link
+          const brandLink = document.querySelector('.navbar-brand');
+          if (brandLink) {
+            brandLink.href = basePath + 'index.html';
+          }
+        })
+        .catch(error => console.error('Error loading navbar:', error));
+    </script>
+
+    <!-- Header Banner -->
+    <header class="projects-topic-header">
+      <div class="container">
+        <h1 style="text-align: justify;">RGC/GRF (15219621)
+          - Rise in summertime ozone levels in South China: Impacts of long-range transpor
+        </h1>
+      </div>
+    </header>
+
+    <!-- Projects Content -->
+    <!-- Previous head and nav content remains the same -->
+
+    <!-- Projects Content -->
+    <main class="container projects-content">
+
+      <div class="projects-section">
+        <h2 class="section-title">Introduction</h2>
+        <div class="content-with-image image-right">
+          <div class="text-content">
+            <p class="projects-text">
+              Tropospheric ozone (O3) pollution has been a long-standing environmental issue for decades in many parts of the world. China is one of the countries that are shrouded in elevated ground-level O3. Moreover, O3 increases across China have been well documented in recent decades. 
+            </p>
+
+            <p class="projects-text">
+              O3 pollution in South China was most serious in autumn. It was thought that the relatively clean air from South China Sea diluted the air pollution including O3 and O3 precursors in summer, resulting in lower O3 levels in South China than those in inland cities. In autumn, continental outflows induced by continental anticyclone and typhoons, together with warm climate, were most conducive to O3 production and accumulation in South China.
+            </p>
+            <p class="projects-text">
+              Since 2013, an ambitious clean air action has been enforced in China, leading to significant reductions in emissions of many primary air pollutants. A handful of studies indicated that O3 in continental outflows in South China stopped increasing. Such changes meant that the autumnal O3 pollution in South China might be alleviated.
+            </p>
+            <p class="projects-text">
+              Indeed, our preliminary analyses uncovered that the number of autumnal O3 nonattainment days in Hong Kong (an example of cities in South China) decreased from 2000–2009 to 2010–2019. In contrast, this number increased in summer. A recent paper also alerted us O3 was increasing in summer at the rate higher than that in any other seasons in Hong Kong. Despite that the summertime O3 levels are still much lower than those in autumn, the increasing number of O3 non-attainment days and rising O3 levels in summer, opposite to the downward trends in autumn, call for attention.
+            </p>
+            <p class="projects-text">
+              However, very few studies focused on summertime O3 pollution in South China. A recent study deduced that the growth of Southeast Asia (SEA) emissions was the driving factor of rising summertime O3 in Hong Kong. However, this conclusion was only based on the difference in O3 trends between observation and simulation with fixed SEA emissions. We will put emphases on chemical characterization of SEA emissions and their aging products in South China, figuring out the occurrence, transport and aging processes of SEA emissions, and quantifying the impacts of SEA emissions on O3 pollution in South China in this project, through analyses of historical data, field observation, and application of box and chemical transport models.
+            </p>
+            <p class="projects-text">
+              The successful completion of this project will clearly reveal the relationships between the rising summertime O3 in South China and SEA emissions.
+            </p>
+
+          </div>
+          <div class="image-content">
+            <img
+              src="../images/pro1.webp"
+              alt="RO2 Reaction Mechanism"
+              class="projects-image" />
+            <p class="figure-caption">Figure source: Xu et al. 2019 JPCA</p>
+          </div>
+        </div>
+
+        <div class="related-publications">
+          <h3>Related Publications:</h3>
+          <div class="publication-item">
+            Xu, L.; Møller, K. H.; Crounse, J. D.; Otkjær, R. V.; Kjaergaard, H.
+            G.; Wennberg, P. O. Unimolecular Reactions of Peroxy Radicals Formed
+            in the Oxidation of Α-Pinene and Β-Pinene by Hydroxyl Radicals. The
+            Journal of Physical Chemistry A 2019, 123, 1661-1674 (
+            <a href="#">link</a>
+            ).
+          </div>
+        </div>
+      </div>
+
+     
+    
+    </main>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.min.js"></script>
+    <script type="module" src="/main.js"></script>
+    <script>
+
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js"></script>
+    <script src="/js/search.js"></script>
+  </body>
+</html>
