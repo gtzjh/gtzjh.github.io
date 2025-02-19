@@ -64,15 +64,14 @@ jobs:
           git config --global user.name "GitHub Actions"
           git config --global user.email "actions@github.com"
           
-          # Stage the changes first
           git add search.json
           
-          # Only proceed with commit and push if there are changes
           if ! git diff-index --quiet HEAD --; then
-            # Now pull with rebase
-            git pull origin main --rebase
-            
+            # 先提交本地变更
             git commit -m "Auto-update search index [skip ci]"
+            # 再拉取远程变更（使用 rebase）
+            git pull origin main --rebase
+            # 最后推送变更
             git push origin HEAD:main
           else
             echo "No changes to commit"
