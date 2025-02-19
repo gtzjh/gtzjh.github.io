@@ -1,77 +1,33 @@
-name: Update Search Index
+name: Update Search Index and Deploy
 
 on:
   schedule:
-    - cron: "0 0 * * *" # 每天UTC时间0点运行
-  push:
-    paths:
-      - '**.html'
-      - '!search.json'
+    - cron: '0 0 * * *'
+  workflow_dispatch:
 
 jobs:
   generate-index:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
     steps:
       - uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
+      - name: Generate search index
+        uses: some-search-index-generator-action@v1
         with:
-          node-version: '18'
-          
-      # 创建 package.json
-      - name: Create package.json
-        run: |
-          echo '{
-            "name": "search-index-generator",
-            "version": "1.0.0",
-            "private": true,
-            "dependencies": {
-              "cheerio": "^1.0.0-rc.12",
-              "lunr": "^2.3.9"
-            }
-          }' > package.json
-          
-      - name: Install dependencies
-        run: |
-          npm install
-          # 显示安装的依赖
-          npm list --depth=0
-      
-      - name: Check if generate-search-index.js exists
-        run: |
-          ls -l scripts/
-          cat scripts/generate-search-index.js
-      
-      - name: Generate Search Index
-        run: |
-          node scripts/generate-search-index.js || {
-            echo "Error generating search index"
-            exit 1
-          }
-          echo "Generated search.json:"
-          ls -l search.json
-          head -c 500 search.json
-        
+          input-dir: ./content
+          output-file: ./static/search.json
+
       - name: Commit changes
         run: |
           git config --global user.name "GitHub Actions"
           git config --global user.email "actions@github.com"
-          
           git add .
-          
           if ! git diff-index --quiet HEAD --; then
             git commit -m "Auto-update search index [skip ci]"
             git pull origin main --rebase
             git push origin HEAD:main
           else
-            # 明确清理未跟踪文件（如果有）
             git clean -fd
-            # 重置可能存在的意外修改
             git reset --hard HEAD
             echo "::notice:: No changes in search.json, skipping commit"
           fi
@@ -90,16 +46,13 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Setup Ruby
-        uses: ruby/setup-ruby@v1 # 正确的官方Ruby设置Action
+        uses: ruby/setup-ruby@v1
         with:
-          ruby-version: 3.1 # 必须与Gemfile中指定的版本一致
-          bundler-cache: true # 自动缓存gems
+          ruby-version: 3.1
+          bundler-cache: true
 
-      - name: Build with Jekyll
-        uses: jeffreytse/jekyll-actions@v2 # 专门为Jekyll优化的Action
-        with:
-          source: ./
-          destination: ./_site
+      - name: Build Jekyll site
+        run: bundle exec jekyll build
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
