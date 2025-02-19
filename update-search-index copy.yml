@@ -7,10 +7,6 @@ on:
     paths:
       - '**.html'
       - '!search.json'
-  workflow_run:
-    workflows: ["Update Search Index"]  # 工作流名称需匹配
-    types: [completed]                 # 当主工作流完成时触发
-    branches: [main]                    # 指定分支
 
 jobs:
   generate-index:
@@ -79,8 +75,3 @@ jobs:
             git reset --hard HEAD
             echo "::notice:: No changes in search.json, skipping commit"
           fi
-
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: "/"  # 指定实际网站构建目录

@@ -1,0 +1,14 @@
+name: Deploy Website
+
+on:
+  workflow_run:
+    workflows: ["Update Search Index"]
+    types: [completed]
+    branches: [main]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      # ... 原有部署步骤 ... 
