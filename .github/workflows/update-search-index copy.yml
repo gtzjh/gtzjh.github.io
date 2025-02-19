@@ -88,30 +88,24 @@ jobs:
     
     steps:
       - uses: actions/checkout@v4
-      
-      - uses: ruby/setup-pages@v1 # 配置Ruby环境
-        with:
-          ruby-version: 3.1 # 与Gemfile指定版本一致
 
-      - name: Bundle install
-        run: |
-          gem install bundler
-          bundle install
-          
-      - name: Build site
-        uses: actions/jekyll-build-pages@v1 # 使用官方Jekyll构建Action
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1 # 正确的官方Ruby设置Action
         with:
-          source: ./ # Jekyll项目根目录
-          destination: ./_site # 默认构建目录
-          
-      - name: Setup Pages
-        uses: actions/configure-pages@v4
-        
+          ruby-version: 3.1 # 必须与Gemfile中指定的版本一致
+          bundler-cache: true # 自动缓存gems
+
+      - name: Build with Jekyll
+        uses: jeffreytse/jekyll-actions@v2 # 专门为Jekyll优化的Action
+        with:
+          source: ./
+          destination: ./_site
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./_site # Jekyll默认输出目录
-          
+          path: ./_site
+
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
